@@ -24,7 +24,7 @@
     }
 
     .DefaultContainer .WhyApex .ForeclosureCopy {
-      font-size: 5vw;
+      font-size: 4vw;
       top : 30%;
       transform: translate(-50%, -30%);
     }
@@ -130,7 +130,7 @@
 
         font-weight: 500;
 
-        font-size: 4vw;
+        font-size: 3.6vw;
 
         background-size: 200% 100%;
         background-position: 100% 0;
@@ -168,13 +168,13 @@
   .ShortTermOptions, .LongTermOptions, .ApexOptions {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     background-color: white;
     z-index: 5;
   }
 
   .ApexOptions {
-    height: 200vh;
+    height: 220vh;
   }
 
   .OptionsMainHeading {
