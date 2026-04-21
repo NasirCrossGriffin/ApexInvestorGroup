@@ -1,0 +1,201 @@
+.NewEntry {
+    position: fixed;
+    width : 90vw;
+    height: 95vh;
+    background-color: black;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 100;
+}
+
+.ImageContainer {
+    position: absolute;
+    left : 5%;
+    top : 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+@media(min-width : 1024px) {
+    .ContentInformation {
+        position: absolute;
+        right : 5%;
+        top : 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 70%;
+    }
+
+    .ImageContainer {
+        position: absolute;
+        left : 5%;
+        top : 50%;
+        max-width: 35%;
+        max-height: 80%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-height: 500px;
+        max-width: 300px;
+    }
+
+    .NewEntryPhoto {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .NewEntryPhotoImg {
+        object-fit: contain;
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        max-width: 300px;
+    }
+}
+
+@media(min-width : 1440px) {
+    .ContentInformation {
+        position: absolute;
+        right : 5%;
+        top : 50%;
+        transform: translateY(-50%);
+        height: 70%;
+    }
+}
+
+.ContentInformation input{
+    width : 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.ContentInformation textarea {
+    width: 400px;
+    height: 200px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media(max-width : 1023px) {
+    .ContentInformation input{
+        width : 80%;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .ContentInformation {
+        position: absolute;
+        width: 100%;
+        height: 80%;
+        bottom: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ContentInformation textarea {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+        width: 90%;
+        height: 100px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .ImageContainer {
+        position: absolute;
+        left : 50%;
+        transform: translateX(-50%);
+        max-height: 200px;
+        top : 40px;
+    }
+
+    .NewEntryPhoto {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .NewEntryPhotoImg {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        max-height: 200px;
+    }
+}
+
+.Background {
+    position: fixed;
+    background-color: black;
+    width : 100vw;
+    height : 100vh;
+    top : 0;
+    left : 0;
+    opacity: 0.5;
+    z-index: 90;
+}
+
+.Submit {
+    position : absolute;
+    left : 90%;
+    top : 90%;
+}
+
+.Delete {
+    position : absolute;
+    left : 80%;
+    top : 90%;
+}
+
+
+@media(max-width : 1024px) {
+    .Delete {
+        position : absolute;
+        left : 65%;
+        top : 90%;
+    }
+
+    .Submit {
+        position : absolute;
+        left : 80%;
+        top : 90%;
+    }
+}
+
+@media(max-width : 1023px) {
+    .Submit {
+        position : absolute;
+        left : 20%;
+        top : 90%;
+    }
+
+    .Delete {
+        position : absolute;
+        left : 60%;
+        top : 90%;
+    }
+}

@@ -1,0 +1,378 @@
+@media (orientation: portrait) {
+    .ForeclosurePage {
+      position: relative;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: fit-content;
+      background-color: white;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .ForeclosureHome {
+        position: relative;
+        margin-top: 12lvh;
+        width: 100vw;
+        height: 120vh;
+        z-index: 4;
+        background-color: white;
+        pointer-events: none;
+    }
+
+    .DefaultContainer .WhyApex .ForeclosureCopy {
+      font-size: 5vw;
+      top : 30%;
+      transform: translate(-50%, -30%);
+    }
+
+    .DefaultContainer {
+      height: 100vh;
+    }
+
+    .WhyApex {
+        width: 100%;
+        height: 100%;
+    }
+
+    .WhyInitial {
+        position: absolute;
+        left: 50%;
+        top : 5%;
+        transform: translateX(-50%) translateY(-5%);
+        width: 90%;
+        height: 20%;
+    }
+
+    .WhySubtext {
+        position: absolute;
+        left: 2%;
+        top: 0;
+        color: black;
+        font-family: Montserrat;
+
+        background: linear-gradient(
+          to right,
+          #000000 0%,
+          #000000 50%,
+          #999898 50%,
+          #999898 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .WhyHeadings {
+        position: absolute;
+        width: 90vw;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 5%;
+        height : fit-content;
+        font-size: 2vw;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .MainHeading {
+        color: black;
+        font-family: Montserrat;
+
+        background: linear-gradient(
+          to right,
+          #000000 0%,
+          #000000 50%,
+          #999898 50%,
+          #999898 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .SubHeading {
+        color: black;
+        font-family: Montserrat;
+    }
+
+    .ForeclosureCopy {
+        position: absolute;
+        top : 50%;
+        left : 50%;
+        transform: translateY(-50%) translateX(-50%);
+        width: 90vw;
+        height: fit-content;
+        
+        color: black;
+        font-family: 'Montserrat';
+        text-align: center;
+
+        background: linear-gradient(
+          to right,
+          #000000 0%,
+          #000000 50%,
+          #999898 50%,
+          #999898 100%
+        );
+
+        font-weight: 500;
+
+        font-size: 4vw;
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    @media (min-width : 600px) {
+      .ForeclosureCopy {
+        top : 45%;
+        font-size: 2.5vw;
+      }
+
+      .DefaultContainer .WhyApex .ForeclosureCopy {
+        font-size: 3vw;
+      }
+    }
+
+    .HouseAssetForeclosure {
+        position: absolute;
+        left: 50%;
+        top : 100%;
+        width: 90vw;
+        transform: translate(-50%, -100%);
+        overflow: hidden;
+    }
+
+    .HouseAssetForeclosure img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }    
+    
+  .ShortTermOptions, .LongTermOptions, .ApexOptions {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 5;
+  }
+
+  .ApexOptions {
+    height: 200vh;
+  }
+
+  .OptionsMainHeading {
+    position: absolute;
+    left: 5%;
+    top : 50%;
+    height: 90%;
+    transform: translate(-5%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+
+  }
+
+  .OptionsMainHeading span {
+    color: black;
+    font-family: 'Montserrat';
+    font-size: 7vw;
+    font-weight: 700;
+
+    background: linear-gradient(
+          to right,
+          #000000 0%,
+          #000000 50%,
+          #999898 50%,
+          #999898 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+  }
+
+    .OptionsMainHeading span span {
+        color: darkgrey;
+        font-family: 'Montserrat';
+        font-size: 7vw;
+        font-weight: 700;
+
+        background: linear-gradient(
+          to right,
+          #000000 0%,
+          #000000 50%,
+          #999898 50%,
+          #999898 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+  }
+
+  .OptionsMainHeading button {
+    background-color: black;
+    color: white;
+    font-size: 4vw;
+    width: fit-content;
+    border-radius: 35px;
+  }
+
+  .OptionsCopy {
+    position: absolute;
+    left: 95%;
+    top : 90%;
+    transform: translate(-95%, -90%);
+    width: 90%;
+    height: 90%;
+    color : black;
+    overflow-x: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .OptionsList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .ForeclosureOption {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    border-width: 1px;
+    border-color: darkgrey;
+    border-style: solid;
+  }
+
+  .ApexForeclosureOption {
+    height : 50vw
+  }
+
+  .OptionMarker {
+    height: 100%;
+    width: 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+    .ForeclosureOption span {
+        color: black;
+        font-family: 'Montserrat';
+        font-size: 3vw;
+        font-weight: 900;
+        width: 90%;
+
+        background: linear-gradient(
+          to right,
+          #999898 0%,
+          #999898 50%,
+          #000000 50%,
+          #000000 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .OptionMarker span {
+        color: darkgray;
+        font-family: 'Montserrat';
+        font-size: 3vw;
+        font-weight: 900;
+    }
+    .ForeclosureOption span span {
+        color: darkgray;
+        font-family: 'Montserrat';
+        font-size: 3vw;
+        font-weight: 900;
+
+        background: linear-gradient(
+          to right,
+          #999898 0%,
+          #999898 50%,
+          #000000 50%,
+          #000000 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    @media (min-width : 600px) {
+    .ForeclosureOption {
+      height: 30vw;
+    }
+
+    .ApexForeclosureOption {
+      height : 50vw
+    }
+
+    .ForeclosureOption span {
+      font-size: 3vw;
+    }
+
+    .ForeclosureOption span span {
+      font-size: 3vw;
+    }
+    
+    .OptionsCopy {
+      top : 100%;
+      transform: translate(-95%, -100%);
+      justify-content: center;
+    }
+
+    .ApexOptions {
+      height: 280vh;
+    }
+
+    .ShortTermOptions, .LongTermOptions {
+      height: 120vh;
+      z-index: 5;
+    }
+  }
+}

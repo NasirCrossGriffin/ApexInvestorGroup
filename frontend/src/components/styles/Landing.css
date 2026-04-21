@@ -1,0 +1,1160 @@
+@media (orientation: landscape) {
+  .LandingPage {
+    width: 100%;
+    height: fit-content;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    overflow: hidden hidden;
+  }
+
+  .Home {
+      position: relative;
+      width : 100vw;
+      height : 300vh;
+      z-index: 1;
+      top : 0;
+      left: 50%;
+      transform: translateX(-50%);
+      overflow: hidden hidden;
+      background-color: transparent;
+      scroll-margin-top: 26vh;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+  }
+
+  .CloudLayer1 {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    width: 100vw;
+    left: 0;
+  }
+
+  .CloudLayer1 img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+
+  .CloudLayer2 {
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+    width: 100vw;
+  }
+
+  .CloudLayer2 img {
+    width : 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .Section1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+  }
+  
+    .Heading {
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        z-index: 2;
+        top : 20%;
+        left : 50%;
+        transform: translateX(-50%)  translateY(-20%);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+  .Heading h1 {
+    color: black;
+    font-size: 7vw;
+    font-weight: 900;
+    font-family: 'Montserrat';
+    text-wrap: nowrap;
+    text-transform: capitalize;
+    margin: 0 0 0 0
+  }
+
+  .Heading h2 {
+    color: black;
+    font-weight: 500;
+    font-family: 'Montserrat';
+  }
+
+  .Heading button {
+    background-color: black;
+    border-radius: 25px;
+    border-width: 0;
+    color: white;
+    font-family: 'Montserrat';
+  }
+
+  .Skyline {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden hidden;
+  }
+
+  .SkylineImage {
+    width : 100%;
+    height: fit-content;
+    left: 0;
+    top: 0;
+  }
+
+  .Skyline img {
+    position: relative;
+    object-fit: contain;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .Apartment {
+    position: absolute;
+    z-index: 2;
+    width: 100vw;
+    height: 200vh;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+  .Apartment img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .HomeContent {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+  } 
+
+    .Section2 {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        bottom : 0;
+        z-index: 4;
+        background-color: white;
+        pointer-events: none;
+    }
+
+    .WhyApex {
+        width: 100%;
+        height: 100%;
+    }
+
+    .WhyInitial {
+        position: absolute;
+        left: 50%;
+        top : 5%;
+        transform: translateX(-50%) translateY(-5%);
+        width: 90%;
+        height: 20%;
+    }
+
+    .WhySubtext {
+        position: absolute;
+        left: 2%;
+        top: 0;
+        color: black;
+        font-family: Montserrat;
+
+        background: linear-gradient(
+          to right,
+          #000000 0%,
+          #000000 50%,
+          #999898 50%,
+          #999898 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .WhyHeadings {
+        position: absolute;
+        width: 40vw;
+        left: 98%;
+        transform: translateX(-98%);
+        top: 0;
+        height : fit-content;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .MainHeading {
+        color: black;
+        font-family: Montserrat;
+        font-size: 3.5vw;
+
+        background: linear-gradient(
+          to right,
+          #000000 0%,
+          #000000 50%,
+          #999898 50%,
+          #999898 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .SubHeading {
+        color: black;
+        font-family: Montserrat;
+        font-size: 1.5vw;
+    }
+
+    @media (max-width : 1024px) {
+      
+    }
+
+    .WhyCopy {
+        position: absolute;
+        top : 55%;
+        left : 98%;
+        transform: translateY(-55%) translateX(-98%);
+        width: 40vw;
+        font-size: 1.1vw;
+        
+        color: black;
+        font-family: 'Montserrat';
+        text-align: center;
+
+        background: linear-gradient(
+          to right,
+          #000000 0%,
+          #000000 50%,
+          #999898 50%,
+          #999898 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .HouseAsset {
+        position: absolute;
+        left: 2%;
+        top : 30%;
+        width: 25vw;
+        transform: translate(-2%, -30%);
+        overflow: hidden;
+    }
+
+    .HouseAsset img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }    
+    
+    .ApexStats {
+        position: absolute;
+        width: 50%;
+        height: 5%;
+        left: 50%;
+        top: 85%;
+        transform: translate(-50%, -85%);
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Stat {
+        width : 20%;
+        height : 90%;
+
+        display : flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Stat h1 {
+        width: 100%;
+        font-family: 'Montserrat';
+        color: black;
+        font-size: 1.5vw;
+        margin: 0 0 0 0;
+    }
+
+    .Stat h2 {
+        width: 100%;
+        font-family: 'Montserrat';
+        color: darkgrey;
+        font-size: 1.2vw;
+        text-wrap: nowrap;
+        margin: 0 0 0 0;
+    }
+
+  .About {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 5;
+  }
+
+  .AboutHeading {
+    position: absolute;
+    left: 50%;
+    top : 5%;
+    transform : translateX(-50%);
+    color: black;
+    font-family: 'Montserrat';
+    font-size: 1.3vw;
+    width: 80%;
+    text-align: center;
+
+    background: linear-gradient(
+          to right,
+          #000000 0%,
+          #000000 50%,
+          #999898 50%,
+          #999898 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+  }
+
+  .Chevrons {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ChevronCont {
+    width : 20%;
+    height: 60%;
+    left: 50%;
+    top : 50%;
+    background-color: white;
+  }
+
+  .Chevron {
+    width: 100%;
+    height: 100%;
+
+    clip-path: polygon(40% 0, 100% 50%, 40% 100%, 0 100%, 58% 50%, 0 0);
+
+    background-color: black;
+    overflow: hidden hidden;
+  }
+
+  .ChevronOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .Chevron img {
+    object-fit: contain;
+    height: 100%;
+    width: auto;
+  }
+
+  .AboutCopy {
+    position: absolute;
+    width : 50%;
+    height : 10%;
+    top : 90%;
+    left : 50%;
+    transform: translate(-50%, -90%);
+    font-size: 1vw;
+  }
+
+  .AboutCopy h2 {
+    color: black;
+    font-family: 'Montserrat';
+    text-align: center;
+
+    background: linear-gradient(
+      to right,
+      #000000 0%,
+      #000000 50%,
+      #999898 50%,
+      #999898 100%
+    );
+
+    background-size: 200% 100%;
+    background-position: 100% 0;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .Process {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 5;
+  }
+
+  .ProcessMainHeading {
+    position: absolute;
+    left: 5%;
+    top : 50%;
+    height: 90%;
+    transform: translate(-5%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+
+  }
+
+  .ProcessMainHeading span {
+    color: black;
+    font-family: 'Montserrat';
+    font-size: 3vw;
+    font-weight: 700;
+
+    background: linear-gradient(
+          to right,
+          #000000 0%,
+          #000000 50%,
+          #999898 50%,
+          #999898 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+  }
+
+    .ProcessMainHeading span span {
+        color: darkgrey;
+        font-family: 'Montserrat';
+        font-size: 3vw;
+        font-weight: 700;
+
+        background: linear-gradient(
+          to right,
+          #000000 0%,
+          #000000 50%,
+          #999898 50%,
+          #999898 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+  }
+
+  .ProcessMainHeading button {
+    background-color: black;
+    color: white;
+    font-size: 1vw;
+    width: fit-content;
+    border-radius: 25px;
+  }
+
+  .ProcessCopy {
+    position: absolute;
+    left: 95%;
+    top : 50%;
+    transform: translate(-95%, -50%);
+    width: 60%;
+    height: 90%;
+    color : black;
+    overflow-x: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .ProcessList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .ProcessStep {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    border-width: 1px;
+    border-color: darkgrey;
+    border-style: solid;
+  }
+
+  .StepMarker {
+    height: 100%;
+    width: 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+    .ProcessStep span {
+        color: black;
+        font-family: 'Montserrat';
+        font-size: 1.4vw;
+        font-weight: 900;
+        width: 90%;
+
+        background: linear-gradient(
+          to right,
+          #999898 0%,
+          #999898 50%,
+          #000000 50%,
+          #000000 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .StepMarker span {
+        color: darkgray;
+        font-family: 'Montserrat';
+        font-size: 1.4vw;
+        font-weight: 900;
+    }
+    .ProcessStep span span {
+        color: darkgray;
+        font-family: 'Montserrat';
+        font-size: 1.4vw;
+        font-weight: 900;
+
+        background: linear-gradient(
+          to right,
+          #999898 0%,
+          #999898 50%,
+          #000000 50%,
+          #000000 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .SectionDivider, .SectionDividerProcess, .SectionDividerCaseStudies {
+        position: relative;
+        width: 100vw;
+        height: 10vh;
+        z-index: 5;
+    }
+
+    .SectionDividerProcess {
+      background: linear-gradient(white, lightgrey);
+    }
+
+    .SectionDividerCaseStudies {
+      background: linear-gradient(lightgrey, black);
+    }
+
+    .ActionSection {
+        position: relative;
+        background-color: black;
+        height: 200vh;
+        width: 100vw;
+        z-index: 5;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .ActionHeader, .ActionContent, .CallToActionSection {
+        position: relative;
+        width: 101vw;
+        height: 40vh;
+        border-width: 1px;
+        border-color: darkgray;
+        border-style: solid;
+        overflow: hidden hidden;
+    }
+
+    .ActionSubheading {
+        position: absolute;
+        left: 0;
+        top : 50%;
+        transform: translate(0, -50%);
+        width: 50%;
+        height: 90%;
+        color: white;
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    .ActionSubheading h2 {
+      font-size: 1.8vw;
+      width: 55%;
+    }
+
+    .CallToActionCopy {
+      position: absolute;
+      left: 0;
+      top : 50%;
+      transform: translate(0, -50%);
+      width: 50%;
+      height: 90%;
+      color: white;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      pointer-events: none;
+      font-size: 1vw;
+    }
+
+    .ActionOverlay {
+      position: absolute;
+      left: 0;
+      top : 0;
+      background-color: black;
+      width: 100%;
+      height: 100%;
+      transition: opacity 0.6s ease;
+      z-index: 9;
+    }
+
+    .ActionContent:hover .ActionOverlay {
+      opacity: 0.2;
+    }
+
+    .ActionImage {
+      pointer-events: none;
+      position: absolute;
+      left: 0;
+      top : 0;
+      width: 100%;
+      height: auto;
+      z-index: 8;
+    }
+
+    .ActionImage img {
+      position: absolute;
+      left: 50%;
+      top : 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .CallToActionCopy h2 {
+        margin: 0 0 0 0;
+        font-family: 'Montserrat';
+        width: 30vw;
+    }
+
+    .CallToActionCopy button {
+        background-color: black;
+        border-color: white;
+        border-radius: 25px;
+        font-weight: bold;
+        font-family: 'Montserrat';
+        width: 40%;
+        font-size: 1vw;
+    }
+
+    .CallToActionSection .ActionSubheading {
+      position: relative;
+    }
+
+    .ActionSubheading h2 {
+        position: absolute;
+        top : 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0 0 0 0;
+        font-family: 'Montserrat';
+    }
+
+    .ActionHeading, .CallToAction {
+        position: absolute;
+        left: 50%;
+        top : 50%;
+        transform: translate(-50%, -50%);
+        height: 90%;
+        width: 50%;
+        color: white;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        pointer-events: none;
+    }
+
+
+    .ActionHeading span, .CallToAction span {
+        margin: 0 0 0 0;
+        color: white;
+        font-family: 'Montserrat';
+        font-size: 3vw;
+        font-weight: bolder;
+    }
+
+    .CallToAction span {
+      font-size: 7vw;
+    }
+
+    .ActionHeading span span {
+        color: darkgrey;
+        font-family: 'Montserrat';
+        font-weight: bolder;
+        font-size: 3vw;
+        font-size: 900;
+    }
+
+    .ActionMarker {
+      position: absolute;
+      left: 5%;
+      top: 50%;
+      transform: translate(-5%, -50%);
+      border-radius: 50%;
+      border-color: white;
+      border-style: solid;
+      font-family: 'Montserrat';
+      color: white;
+      width: 2vw;
+      height: 2vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .CaseStudies {
+      position: relative;
+      width : 100vw;
+      height: 100vh;
+      background-color: lightgrey;
+      z-index: 5;
+    }
+
+    .CaseStudiesMainHeading {
+      position: absolute;
+    }
+
+    .CaseStudiesMainHeading {
+      position: absolute;
+      left: 5%;
+      top : 5%;
+      transform: translate(-5%, -5%);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+  .CaseStudiesMainHeading span {
+    color: black;
+    font-family: 'Montserrat';
+    font-size: 3vw;
+    font-weight: 700;
+
+    background: linear-gradient(
+          to right,
+          #000000 0%,
+          #000000 50%,
+          #999898 50%,
+          #999898 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+  }
+
+  .CaseStudiesMainHeading span span {
+      color: darkgrey;
+      font-family: 'Montserrat';
+      font-size: 3vw;
+      font-weight: 700;
+
+      background: linear-gradient(
+          to right,
+          #000000 0%,
+          #000000 50%,
+          #999898 50%,
+          #999898 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+  }
+
+  .CaseStudyContainer {
+    position: absolute;
+    top : 80%;
+    left : 85%;
+    transform: translate(-85%, -80%);
+    width: 40vw;
+    height: 30vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .CaseStudySelector {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width : 100%;
+    height: 3vw;
+  }
+
+  .CaseStudySelector button {
+    border-radius: 50%;
+    border-color: black;
+    border-style: solid;
+    background-color: transparent;
+    color: black;
+    margin-right: 1vw;
+    height: 100%;
+    aspect-ratio: 1/1;
+    font-size: 1vw;
+  }
+
+  .CaseStudy {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height : 30vh;
+  }
+
+  .ClientName, .PropertyAddress, .CaseStudyTestimony span {
+    font-size: 2vw;
+    font-weight: bolder;
+    color : black;
+    margin-bottom: 2vw;
+    font-family: 'Montserrat';
+
+    background: linear-gradient(
+            to right,
+          #000000 0%,
+          #000000 50%,
+          #999898 50%,
+          #999898 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+  }
+  
+
+  .CaseStudyTestimony {
+    width: 100%;
+    height: 80%;
+    margin: 0 0 0 0;
+  }
+
+  .CaseStudyTestimony span {
+    font-weight: normal;
+    font-family: 'Times New Roman';
+  }
+  
+  .CaseStudyImage {
+    position: absolute;
+    width: 40vw;
+    height: 30vw;
+    left: 5%;
+    top : 80%;
+    transform: translate(-5%, -80%);
+    overflow : hidden hidden;
+  }
+
+  .CaseStudyImage img {
+    position: absolute;
+    object-fit: contain;
+    height: 100%;
+    width: auto;
+    left: 50%;
+    top : 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .FinalSection {
+    position: relative;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .FinalBackground {
+    position: relative;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    overflow: hidden hidden;
+  }
+
+  .FinalBackground img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+
+  .FinalSection .Overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 7;
+    background-color: rgb(0, 0, 0, 0.5);
+    top : 0;
+    left : 0;
+  }
+
+  .FinalCallToAction {
+    position: absolute;
+    z-index: 8;
+    left: 50%;
+    top : 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .FinalCallToAction button {
+    border-radius: 25px;
+    border-color: transparent;
+    border-style: none;
+    color: black;
+    background-color: white;
+    font-family: 'Montserrat';
+  }
+
+  .FinalCallToAction h1 {
+      font-family: 'Montserrat';
+      color : white;
+      font-weight: bolder;
+  }
+
+  .ApexContact {
+    position: absolute;
+    width: 50%;
+    height: 5%;
+    left: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+    .Contact {
+      width : 20%;
+      height : 90%;
+
+      display : flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .Contact h1 {
+        width: 100%;
+        font-family: 'Montserrat';
+        color: darkgray;
+        font-size: 1.5vw;
+        margin: 0 0 0 0;
+    }
+
+    .Contact h2 {
+        width: 100%;
+        font-family: 'Montserrat';
+        color: white;
+        font-size: 1.2vw;
+        text-wrap: nowrap;
+        margin: 0 0 0 0;
+    }
+
+    .ForeclosureSection {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      z-index: 7;
+      background-color: white;
+    }
+
+    .ForeclosureHeading {
+      position: absolute;
+      left: 5%;
+      top : 50%;
+      height: 90%;
+      transform: translate(-5%, -50%);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+  }
+
+  .ForeclosureHeading span {
+    color: black;
+    font-family: 'Montserrat';
+    font-size: 3vw;
+    font-weight: 700;
+
+    background: linear-gradient(
+          to right,
+          #000000 0%,
+          #000000 50%,
+          #999898 50%,
+          #999898 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+  }
+
+    .ForeclosureHeading span span {
+        color: darkgrey;
+        font-family: 'Montserrat';
+        font-size: 3vw;
+        font-weight: 700;
+
+        background: linear-gradient(
+          to right,
+          #000000 0%,
+          #000000 50%,
+          #999898 50%,
+          #999898 100%
+        );
+
+        background-size: 200% 100%;
+        background-position: 100% 0;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+  }
+
+  .ForeclosureHeading button {
+    background-color: black;
+    color: white;
+    font-size: 1vw;
+    width: fit-content;
+    border-radius: 25px;
+  }
+
+  .ForeclosureImage {
+    position: absolute;
+    width: 45vw;
+    height: fit-content;
+    left: 50%;
+    top : 90%;
+    transform: translate(-50%, -90%);
+  }
+
+  .ForeclosureImage img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}

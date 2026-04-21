@@ -1,0 +1,205 @@
+
+@media (orientation: portrait) {
+    .Navbar {
+        width: 100vw;
+        height: 12lvh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        background-color: transparent;
+        transition: transform 0.6s ease;
+    }
+
+    .NavBackground {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        transition: opacity 0.6s ease;
+    }
+
+    .NavContent {
+        width: 100%;
+        height: 100%;
+        left : 0;
+        top : 0;
+        z-index: 51;
+    }
+
+    .WithBackground {
+        opacity: 1;
+    }
+
+    .NoBackground {
+        opacity: 0;
+    }
+
+    .Navigation {
+        position: absolute;
+        opacity: 0;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 7vh;
+        pointer-events: none;
+    }
+
+    .Navigation button {
+        border-width: 0;
+        height: 8vh;
+        text-wrap: nowrap;
+        background-color: transparent;
+    }
+    
+    .Navigation button h3 {
+        font-family: 'Montserrat', sans-serif;
+        color: black;
+        font-weight: 500;
+        margin: 0 0 0 0;
+    }
+
+    .NavLogo {
+        position: absolute;
+        top : 50%;
+        left : 2%;
+        transform: translateX(-2%) translateY(-50%);
+        height: 100%;
+        width: fit-content;
+    }
+
+    .NavLogo img {
+        object-fit: contain;
+        height: 100%;
+        width: auto;
+    }
+
+    .NavContact {
+        position: absolute;
+        font-family: 'Montserrat';
+        color: white;
+        background-color: black;
+        right : 2%;
+        top : 50%;
+        transform: translateX(2%) translateY(-50%);
+        border-width: 0;
+        border-radius: 25px;
+        pointer-events: none;
+        display: none;
+    }
+
+    @media (max-width: 768px) { 
+        .Navigation {
+            height: 35px;
+        }
+
+
+        .Navigation button {
+            padding-left: 10px;
+            padding-right: 10px;
+            height: 40px;
+        }
+    }
+
+    .ModelName {
+        position: relative;
+        height : 15vh;
+        width : auto;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .NavHidden {
+        transform: translateY(-15vh);
+    }
+
+    .NavRevealed {
+        transform: translateY(0);
+    }
+
+    .NavDrawerToggle {
+        position: absolute;
+        height: 30%;
+        aspect-ratio: 1/1;
+        right : 2%;
+        top : 50%;
+        transform: translateX(2%) translateY(-50%);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .NavDrawerToggle span {
+        width: 100%;
+        height: 10%;
+        border-radius: 35px;
+        background-color: black;
+    }
+
+    .NavDrawer {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 40;
+    }
+
+    .NavDrawerBackground {
+        position: absolute;
+        background-color: rgb(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 41;
+    }
+
+    .DrawerContainer {
+        background-color: white;
+        position: absolute;
+        left: 100%;
+        transform: translateX(-100%);
+        width: 75%;
+        height: 100lvh;
+        z-index: 42;
+    }
+
+    .Drawer {
+        position: absolute;
+        left : 50%;
+        top : 12lvh;
+        transform: translateX(-50%);
+        margin-top: 1lvh;
+        width:  70%;
+        height: 70%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @media (min-width : 600px) {
+        .Drawer {
+            height: 50%;
+        }
+    }
+
+    .Drawer .NavLink Button {
+        font-family: 'Montserrat';
+        background-color: transparent;
+        color: black;
+        font-size: 4vw;
+        height: fit-content;
+        padding: 0 0 0 0;
+    }
+}

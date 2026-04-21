@@ -1,0 +1,73 @@
+.ManageContent {
+    position: absolute;
+    top : 176px;
+    left : 0;
+    width: 100vw;
+    min-height: 100vh;
+    height: fit-content;
+}
+
+.Title {
+    position: absolute;
+    left: 5%;
+    top : 0;
+}
+
+.AddToPortfolio {
+    position: absolute;
+    left : 5%;
+    top : 120px;
+}
+
+@media(max-width : 1023px) {
+    .AddToPortfolio {
+        position: absolute;
+        left : 5%;
+        top : 160px;
+    }
+}
+
+.ContentGrid {
+    position: absolute;
+    top : 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    column-gap: 16px;
+    row-gap: 16px;
+    display: grid;
+}
+
+@media(max-width : 1023px) {
+    .ContentGrid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+        margin-top: 40px;
+    }
+}
+
+@media(min-width : 1024px) {
+    .ContentGrid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media(min-width : 1440px) {
+    .ContentGrid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.ContentContainer {
+    width: 300px;
+    height: 300px;
+}
+
+.ContentContainer img {
+    object-fit: contain;
+    max-width: 300px;
+    max-height: 300px;
+}

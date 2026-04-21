@@ -1,0 +1,229 @@
+@media (orientation: landscape) {
+    .ViewEntry {
+        position : fixed;
+        width : 100vw;
+        height: 100vh;
+        top : 0;
+        left : 0;
+        background-color: black;
+        z-index : 50;
+    }
+
+    .Exit {
+        position: absolute;
+        top : 20px;
+        left: 20px;
+        font-family: 'Montserrat';
+        font-size: 2vw;
+        z-index: 46;
+    }
+
+    .Exit button {
+        color: white;
+        background-color: rgb(32, 32, 32);
+    }
+
+    .ViewImageContainer {
+        position: absolute;
+        top : 50%;
+        right : 2%;
+        transform: translateY(-50%);
+        height: 90%;
+        max-width: 35vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 45;
+    }
+
+    .ViewEntryPhoto {
+        object-fit: contain;
+        height: 100%;
+        width : 100%
+    }
+
+    .ViewEntryPhoto img {
+        object-fit: contain;
+        height: 100%;
+        width : 100%;
+    }
+
+    .ViewContentInformation {
+        position: relative;
+        font-family: 'Montserrat';
+        left: 3vw;
+        width: 50vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 45;
+    }
+
+    .EntryTitle {
+        font-family: "Edu NSW ACT Cursive", cursive;
+        color : hotpink;
+        font-size: 4vw;
+        margin: 0 0 0 0;
+    }
+
+    .EntryBody {
+        color: black;
+        background-color: pink;
+        border-radius: 25px;
+        border-color: hotpink;
+        border-style: groove;
+        border-width: 12px;
+        padding: 10px 10px 10px 10px;
+        width: 100%;
+        height: 15vw;
+        overflow-y: auto;
+    }
+
+    .EntryDate {
+        color : white
+    }
+
+    .EntryBody {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .Pink_Butterflies {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        z-index: 40;
+    }
+
+    .Pink_Butterflies img {
+        object-fit: contain;
+        width: 100%;
+    }
+}
+
+@media (orientation: portrait) {
+    .ViewEntry {
+        position : fixed;
+        width : 100vw;
+        height: 100vh;
+        top : 0;
+        left : 0;
+        background-color: black;
+        z-index : 50;
+    }
+
+    .Exit {
+        position: absolute;
+        top : 20px;
+        left: 20px;
+        color: white;
+        background-color: rgb(32, 32, 32);
+        font-family: 'Montserrat';
+        font-size: 2vh;
+        z-index: 46;
+    }
+
+    .Exit button {
+        color: white;
+        background-color: rgb(32, 32, 32);
+    }
+
+    .ViewImageContainer {
+        position: absolute;
+        top : 2vh;
+        left : 50%;
+        transform: translateX(-50%);
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 45;
+    }
+
+    .ViewEntryPhoto {
+        object-fit: contain;
+        height: 100%;
+        width : 100%;
+    }
+
+    .ViewEntryPhoto img {
+        object-fit: contain;
+        height: 100%;
+        width : 100%;
+    }
+
+    .ViewContentInformation {
+        position: absolute;
+        font-family: 'Montserrat';
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 5vh;
+        width: 85vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 45;
+    }
+
+    .EntryTitle {
+        font-family: "Edu NSW ACT Cursive", cursive;
+        color : white;
+        font-size: 7vw;
+        padding: 5vw 5vw 5vw 5vw;
+        border-radius: 25px;
+        margin: 0 0 0 0;
+    }
+
+    .EntryBody {
+        color: black;
+        background-color: pink;
+        border-radius: 25px;
+        border-color: hotpink;
+        border-style: groove;
+        border-width: 12px;
+        padding: 10px 10px 10px 10px;
+        width: 100%;
+        height: 20vh;
+        overflow-y: scroll;
+        font-size: 2vh;
+        font-weight: 500;
+    }
+
+    .EntryDate {
+        color : white
+    }
+
+    .Pink_Butterflies {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        z-index: 40;
+    }
+
+    .Pink_Butterflies img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        /* Rotate landscape → portrait */
+        transform: translate(-50%, -50%) rotate(90deg);
+
+        /* Swap dimensions after rotation */
+        width: 100vh;
+        height: 100vw;
+
+        object-fit: cover;
+
+    }
+
+}

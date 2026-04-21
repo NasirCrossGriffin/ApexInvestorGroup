@@ -1,0 +1,113 @@
+@media (orientation: landscape) {
+    .Navbar {
+        width: 100vw;
+        height: 12lvh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        background-color: transparent;
+        transition: transform 0.6s ease;
+    }
+
+    .NavBackground {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        transition: opacity 0.6s ease;
+    }
+
+    .NavContent {
+        z-index: 51;
+    }
+
+    .WithBackground {
+        opacity: 1;
+    }
+
+    .NoBackground {
+        opacity: 0;
+    }
+
+    .Navigation {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 7vh;
+    }
+
+    .Navigation button {
+        border-width: 0;
+        height: 8vh;
+        text-wrap: nowrap;
+        background-color: transparent;
+    }
+    
+    .Navigation button h3 {
+        font-family: 'Montserrat', sans-serif;
+        color: black;
+        font-weight: 500;
+        margin: 0 0 0 0;
+    }
+
+    .NavLogo {
+        position: absolute;
+        top : 50%;
+        left : 2%;
+        transform: translateX(-2%) translateY(-50%);
+        height: 100%;
+        width: fit-content;
+    }
+
+    .NavLogo img {
+        object-fit: contain;
+        height: 100%;
+        width: auto;
+    }
+
+    .NavContact {
+        position: absolute;
+        font-family: 'Montserrat';
+        color: white;
+        background-color: black;
+        right : 2%;
+        top : 50%;
+        transform: translateX(2%) translateY(-50%);
+        border-width: 0;
+        border-radius: 25px;
+    }
+
+    @media (max-width: 768px) { 
+        .Navigation {
+            height: 35px;
+        }
+
+
+        .Navigation button {
+            padding-left: 10px;
+            padding-right: 10px;
+            height: 40px;
+        }
+    }
+
+    .ModelName {
+        position: relative;
+        height : 15vh;
+        width : auto;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .NavHidden {
+        transform: translateY(-15vh);
+    }
+
+    .NavRevealed {
+        transform: translateY(0);
+    }
+}
