@@ -33,8 +33,9 @@ function Landing({
   const cloudTwoRef = useRef<HTMLDivElement | null>(null);
   const apartmentRef = useRef<HTMLDivElement | null>(null);
   const headingRef = useRef<HTMLDivElement | null>(null);
+  const processListRef = useRef<HTMLDivElement | null>(null);
 
-    const whySubtext = useRef<HTMLHeadingElement | null>(null);
+  const whySubtext = useRef<HTMLHeadingElement | null>(null);
 
   const whyMainHeading = useRef<HTMLHeadingElement | null>(null);
   const whyCopy = useRef<HTMLDivElement | null>(null);
@@ -356,6 +357,32 @@ function Landing({
         },
       });
 
+      const processSteps = processListRef.current
+        ? Array.from(
+            processListRef.current.querySelectorAll(".ProcessStep")
+          ) as HTMLDivElement[]
+        : [];
+
+      gsap.set(processSteps, {
+        x: -80,
+        autoAlpha: 0,
+      });
+
+      processSteps.forEach((step) => {
+        gsap.to(step, {
+          x: 0,
+          autoAlpha: 1,
+          duration: 0.9,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: step,
+            start: "top 80%",
+            toggleActions: "play none none none",
+            once: true,
+          },
+        });
+      });
+
       const chevrons = [
         firstChevron.current,
         secondChevron.current,
@@ -438,9 +465,9 @@ function Landing({
         <div className='Section1'>
           <div className='Apartment' ref={apartmentRef}><img src='/Apartment.png' /></div>
           <div className='Heading' ref={headingRef}>
-            <h1>Invest at the Apex</h1>
-            <h2>Quick. Secure. Property investors</h2>
-            <button onClick={() => {window.open(`${BASE_URL}/lead/buy`, '_blank')}}>{"Find Properties →"}</button>
+            <h1 className='fade-in-slide-up'>Invest at the Apex</h1>
+            <h2 className='fade-in-slide-up'>Quick. Secure. Property investors</h2>
+            <button className='fade-in-slide-up' onClick={() => {window.open(`${BASE_URL}/lead/buy`, '_blank')}}>{"Find Properties →"}</button>
           </div>
         </div>
         <div className='CloudLayer1' ref={cloudOneRef}><img src={window.innerWidth >= window.innerHeight ? '/CloudLayer1.png' : '/CloudLayer1_mobile.png'}/></div>
@@ -531,7 +558,7 @@ function Landing({
         </div>
         <div className='ProcessCopy'>
           <h2>Steps:</h2>
-          <div className='ProcessList'>
+          <div className='ProcessList' ref={processListRef}>
             <div className='ProcessStep'>
               <div className='StepMarker'><span>➤</span></div>
               <span ref={processAnalysis}>Property Analysis. <span>

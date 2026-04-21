@@ -28,6 +28,9 @@ function Foreclosure({
   const cloudTwoRef = useRef<HTMLDivElement | null>(null);
   const apartmentRef = useRef<HTMLDivElement | null>(null);
   const headingRef = useRef<HTMLDivElement | null>(null);
+  const shortTermList = useRef<HTMLDivElement | null>(null);
+  const longTermList = useRef<HTMLDivElement | null>(null);
+  const apexOptionsList = useRef<HTMLDivElement | null>(null);
 
     const whySubtext = useRef<HTMLHeadingElement | null>(null);
 
@@ -448,6 +451,86 @@ const overageClaim = useRef<HTMLSpanElement | null>(null);
             end: "top 30%",
             }
         });
+
+        const shortTermElements = shortTermList.current
+        ? Array.from(
+            shortTermList.current.querySelectorAll(".ForeclosureOption")
+            ) as HTMLDivElement[]
+        : [];
+
+        gsap.set(shortTermElements, {
+        x: -80,
+        autoAlpha: 0,
+        });
+
+        shortTermElements.forEach((step) => {
+        gsap.to(step, {
+            x: 0,
+            autoAlpha: 1,
+            duration: 0.9,
+            ease: "power3.out",
+            scrollTrigger: {
+            trigger: step,
+            start: "top 80%",
+            toggleActions: "play none none none",
+            once: true,
+            },
+        });
+        });
+
+        const longTermElements = longTermList.current
+        ? Array.from(
+            longTermList.current.querySelectorAll(".ForeclosureOption")
+            ) as HTMLDivElement[]
+        : [];
+
+        gsap.set(longTermElements, {
+        x: -80,
+        autoAlpha: 0,
+        });
+
+        longTermElements.forEach((step) => {
+        gsap.to(step, {
+            x: 0,
+            autoAlpha: 1,
+            duration: 0.9,
+            ease: "power3.out",
+            scrollTrigger: {
+            trigger: step,
+            start: "top 80%",
+            toggleActions: "play none none none",
+            once: true,
+            },
+        });
+        });
+
+        const apexOptionElements = apexOptionsList.current
+        ? Array.from(
+            apexOptionsList.current.querySelectorAll(".ForeclosureOption")
+            ) as HTMLDivElement[]
+        : [];
+
+        gsap.set(apexOptionElements, {
+        x: -80,
+        autoAlpha: 0,
+        });
+
+        apexOptionElements.forEach((step) => {
+        gsap.to(step, {
+            x: 0,
+            autoAlpha: 1,
+            duration: 0.9,
+            ease: "power3.out",
+            scrollTrigger: {
+            trigger: step,
+            start: "top 80%",
+            toggleActions: "play none none none",
+            once: true,
+            },
+        });
+        });
+
+
   }, []);
 
   const caseStudies = [
@@ -534,7 +617,7 @@ const overageClaim = useRef<HTMLSpanElement | null>(null);
                 
                 <div className='OptionsCopy'>
                     <h2>Options:</h2>
-                    <div className='OptionsList'>
+                    <div className='OptionsList' ref={shortTermList}>
                         <div className='ForeclosureOption'>
                             <div className='OptionMarker'><span>➤</span></div>
                             <span ref={mortgageReinstatement}>MORTGAGE REINSTATEMENT. <span>
@@ -573,7 +656,7 @@ const overageClaim = useRef<HTMLSpanElement | null>(null);
                 
                 <div className='OptionsCopy'>
                     <h2>Options:</h2>
-                    <div className='OptionsList'>
+                    <div className='OptionsList' ref={longTermList}>
                         <div className='ForeclosureOption'>
                             <div className='OptionMarker'><span>➤</span></div>
                             <span ref={mortgageModification}>MORTGAGE MODIFICATION. <span>
@@ -615,7 +698,7 @@ const overageClaim = useRef<HTMLSpanElement | null>(null);
                 
                 <div className='OptionsCopy'>
                     <h2>Options:</h2>
-                    <div className='OptionsList'>
+                    <div className='OptionsList' ref={apexOptionsList}>
                         <div className='ForeclosureOption ApexForeclosureOption'>
                             <div className='OptionMarker'><span>➤</span></div>
                             <span ref={homeRetention}>Home Retention Refinance Program. <span>
