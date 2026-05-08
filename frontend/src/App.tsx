@@ -10,6 +10,11 @@ import Admin from './components/Admin.tsx';
 import AdminLogin from './components/AdminLogin.tsx';
 import Foreclosure from './components/Foreclosure.tsx';
 import Footer from './components/Footer.tsx';
+import PrivacyPolicy from './components/PrivacyPolicy.tsx';
+import TermsOfUse from './components/TermsOfUse.tsx';
+import RealEstateDisclaimer from './components/RealEstateDisclaimer.tsx';
+import AccessibilityStatement from './components/AccessibilityStatement.tsx';
+import ContactPage from './components/Contact.tsx';
 
 function App() {
   const [scrollTarget, setScrollTarget] = useState<number>(0)
@@ -17,6 +22,65 @@ function App() {
   const [isScrollingUp, setIsScrollingUp] = useState(true);
   const lastScrollY = useRef(0);
   const [passedFirstScreen, setPassedFirstScreen] = useState(false);
+
+  useEffect(() => {
+    const isBrowserFullscreen = () => {
+        return (
+            window.outerWidth === screen.availWidth &&
+            window.outerHeight === screen.availHeight
+        );
+    };
+
+    const setHeight = () => {
+        const height = window.visualViewport?.height ?? window.innerHeight;
+
+        console.log(height);
+
+        document.documentElement.style.setProperty("--app-height", `${height}px`);
+    };
+  
+    const setWidth = () => {
+        const width = window.visualViewport?.width ?? window.innerWidth;
+
+        console.log(width);
+
+        document.documentElement.style.setProperty("--app-width", `${width}px`);
+    };
+  
+    setHeight();
+    setWidth();
+
+    function handleViewportChange() {
+        // Let mobile Chrome finish resizing after orientation/UI changes
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            setHeight();
+            setWidth();
+          });
+        });
+      }
+  
+    screen.orientation.addEventListener("change", (event) => {
+        handleViewportChange();
+    });
+
+    document.addEventListener("fullscreenchange", () => {
+      handleViewportChange();
+      console.log("fullscreen")
+    });
+
+    let previousFullscreen = isBrowserFullscreen();
+
+    window.addEventListener("resize", () => {
+      const currentFullscreen = isBrowserFullscreen();
+  
+      if (currentFullscreen !== previousFullscreen) {
+          previousFullscreen = currentFullscreen;
+          console.log("browser fullscreen changed");
+          handleViewportChange();
+      }
+    });
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,8 +138,11 @@ function App() {
                     <Route path="/Home" element={<Landing scrollTarget={scrollTarget}/>} />
                     <Route path="/Foreclosure" element={<Foreclosure scrollTarget={scrollTarget}/>} />
                     <Route path="/Portfolio" element={<Portfolio />} />
-                    <Route path="/Admin" element={<Admin />} />
-                    <Route path="/Admin/Login" element={<AdminLogin />} />
+                    <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                    <Route path="/terms-of-use" element={<TermsOfUse />} />
+                    <Route path="/real-estate-disclaimer" element={<RealEstateDisclaimer />} />
+                    <Route path="/accessibility" element={<AccessibilityStatement />} />
+                    <Route path="/contact" element={<ContactPage />} />
                 </>
         </Routes>
         <Footer setScrollTarget={setScrollTarget} />

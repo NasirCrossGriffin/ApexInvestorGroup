@@ -83,6 +83,8 @@ function Landing({
 
   const sectionRefs = [homeRef, aboutRef, processSectionRef, foreclosureRef, caseStudiesRef, servicesRef];
 
+
+
   useEffect(() => {
     if (scrollTarget === undefined) return;
 
@@ -104,7 +106,7 @@ function Landing({
       }) : gsap.set(cloudOneRef.current, {
         autoAlpha: 1,
         y: 860,
-      })
+      });
 
       gsap.set(cloudTwoRef.current, {
         autoAlpha: 0.5,
@@ -440,8 +442,8 @@ function Landing({
     },
 
     {
-      Address : "313 E Washington Ave",
-      Client : "Newtown, PA",
+      Address : "Newtown, PA",
+      Client : "Stacy Gonzalez",
       Testimony : `Stacy was struggling to afford her monthly rate, she was under water
       on her loan. Apex Investor Group deployed equity into the property and assisted
       her in selling the home at market value.`

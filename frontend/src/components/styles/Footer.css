@@ -3,8 +3,8 @@
       position: relative;
       z-index: 6;
       background-color: black;
-      width: 100vw;
-      height: 100vh;
+      width: calc(var(--app-width) * 1);
+      height: calc(var(--app-height) * 1);
       margin: 0 0 0 0;
       padding: 0 0 0 0;
     }
@@ -16,19 +16,20 @@
       left : 5%;
       top : 5%;
       transform: translate(-5%, -5%);
+      color: white;
     }
 
     .FooterHeading span {
       margin: 0 0 0 0;
       font-family: 'Montserrat';
-      font-size: 3vw;
+      font-size: calc(var(--app-width) * .03);;
       font-weight: bolder;
     }
 
     .FooterLogo {
       position: absolute;
-      width: 20vw;
-      height: 20vw;
+      width: calc(var(--app-width) * .2);
+      height: calc(var(--app-width) * .2);
 
       top: 99%;
       left: 1%;
@@ -43,9 +44,9 @@
 
     .FooterNav {
       position: absolute;
-      height: 20vw;
+      height: calc(var(--app-height) * .2);
       top : 5%;
-      left: 80%;
+      left: 95%;
       transform: translate(-80%, -5%);
 
       display: flex;
@@ -55,16 +56,16 @@
     }
 
     .FooterNav a {
-      font-size: 1.5vw;
+      font-size: calc(var(--app-width) * .015);;
       color: white;
       font-family: 'Montserrat';
       font-weight: bold;
-      margin-bottom: 1vw;
+      margin-bottom: calc(var(--app-width) * .01);;
     }
 
     .SocialsNav {
       position: absolute;
-      height: 20vw;
+      height: calc(var(--app-width) * .2);;
       top : 5%;
       left: 95%;
       transform: translate(-95%, -5%);
@@ -76,11 +77,11 @@
     }
 
     .SocialsNav a {
-      font-size: 1vw;
+      font-size: calc(var(--app-width) * .01);;
       color: white;
       font-family: 'Montserrat';
       font-weight: bold;
-      margin-bottom: 1vw;
+      margin-bottom: calc(var(--app-width) * .01);;
     }
 
     .ApexContact {
@@ -111,7 +112,7 @@
         width: 100%;
         font-family: 'Montserrat';
         color: darkgray;
-        font-size: 1.5vw;
+        font-size: calc(var(--app-width) * .015);;
         margin: 0 0 0 0;
     }
 
@@ -119,9 +120,75 @@
         width: 100%;
         font-family: 'Montserrat';
         color: white;
-        font-size: 1.2vw;
+        font-size: calc(var(--app-width) * .012);;
         text-wrap: nowrap;
         margin: 0 0 0 0;
+    }
+
+    .Operator {
+      font-size: 12px;
+      width: 100%;
+    }
+
+    .LegalProtections {
+      position: absolute;
+      right : 2.5%;
+      bottom : 0;
+      width : 70%;
+      height: 40%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .Divider {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 1px;
+      min-height: 1px;
+      background-color: rgb(64, 64, 64);
+    }
+
+    .LegalNav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 95%;
+    }
+
+    .LegalNav a {
+      text-decoration: underline;
+      color: white;
+      font-size: 12px;
+    }
+
+    .LegalDisclaimers {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .LegalDisclaimers span {
+      font-size: 12px;
+      width: 100%;
+      font-weight: normal;
+
+      margin-bottom: 5px;
+    }
+
+    .LegalDisclaimers span span {
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .Rights {
+      width: 100%;
+      font-size: 12px;
     }
 }
 
@@ -130,8 +197,8 @@
       position: relative;
       z-index: 6;
       background-color: black;
-      width: 100vw;
-      height: 100vh;
+      width: calc(var(--app-width) * 1);;
+      height: calc(var(--app-height) * 1);
       margin: 0 0 0 0;
       padding: 0 0 0 0;
     }
@@ -143,19 +210,21 @@
       left : 5%;
       top : 5%;
       transform: translate(-5%, -5%);
+      color: white;
     }
 
     .FooterHeading span {
       margin: 0 0 0 0;
       font-family: 'Montserrat';
-      font-size: 3vw;
+      font-size: calc(var(--app-width) * .03);;
       font-weight: bolder;
+      color: white;
     }
 
     .FooterLogo {
       position: absolute;
-      width: 20vw;
-      height: 20vw;
+      width: calc(var(--app-width) * .2);;
+      height: calc(var(--app-width) * .2);;
 
       top: 99%;
       left: 1%;
@@ -170,10 +239,10 @@
 
     .FooterNav {
       position: absolute;
-      height: 40vw;
-      top : 70%;
-      left: 5%;
-      transform: translate(-5%, -70%);
+      height: calc(var(--app-width) * .4);;
+      top : 5%;
+      right: 5%;
+      transform: translate(5%, -5%);
 
       display: flex;
       flex-direction: column;
@@ -182,47 +251,26 @@
     }
 
     .FooterNav a {
-      font-size: 1.5vw;
+      font-size: calc(var(--app-width) * .015);;
       color: white;
       font-family: 'Montserrat';
       font-weight: bold;
-      margin-bottom: 1vw;
-      font-size: 3vw;
-    }
-
-    .SocialsNav {
-      position: absolute;
-      height: 40vw;
-      top : 70%;
-      left: 40%;
-      transform: translate(-40%, -70%);
-
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-
-    .SocialsNav a {
-      font-size: 2.5vw;
-      color: white;
-      font-family: 'Montserrat';
-      font-weight: bold;
-      margin-bottom: 1vw;
+      margin-bottom: calc(var(--app-width) * .01);;
+      font-size: calc(var(--app-width) * .03);;
     }
 
     .ApexContact {
       position: absolute;
       width: 25%;
-      height: 30%;
-      left: 5%;
-      top: 20%;
-      transform: translate(-5%, -20%);
+      height: 15%;
+      left: 2%;
+      top: 10%;
+      transform: translate(-2%, -10%);
 
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
     }
 
     .Contact {
@@ -239,7 +287,7 @@
         width: 100%;
         font-family: 'Montserrat';
         color: darkgray;
-        font-size: 3vw;
+        font-size: calc(var(--app-width) * .03);;
         margin: 0 0 0 0;
     }
 
@@ -247,8 +295,77 @@
         width: 100%;
         font-family: 'Montserrat';
         color: white;
-        font-size: 3vw;
+        font-size: calc(var(--app-width) * .03);;
         text-wrap: nowrap;
         margin: 0 0 0 0;
+    }
+
+    .Operator {
+      font-size: 12px;
+      width: 100%;
+    }
+
+    .LegalProtections {
+      position: absolute;
+      transform: translate(-50%, -65%);
+      left : 50%;
+      top : 65%;
+      width : 90%;
+      height: 40%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .Divider {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 1px;
+      min-height: 1px;
+      background-color: rgb(64, 64, 64);
+    }
+
+    .LegalNav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 95%;
+    }
+
+    .LegalNav a {
+      text-decoration: underline;
+      color: white;
+      font-size: 9px;
+      width: 10%;
+      text-align: center;
+    }
+
+    .LegalDisclaimers {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .LegalDisclaimers span {
+      font-size: 12px;
+      width: 100%;
+      font-weight: normal;
+
+      margin-bottom: 5px;
+    }
+
+    .LegalDisclaimers span span {
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .Rights {
+      width: 100%;
+      font-size: 12px;
     }
 }

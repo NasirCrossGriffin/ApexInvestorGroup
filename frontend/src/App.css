@@ -1,15 +1,11 @@
-html {
-  position: relative;
-  width: 100vw;
-  overflow: hidden auto;
+body {
+  width: (var(--app-width));
+  padding : 0 0 0 0;
+  margin : 0 0 0 0;
+  overflow-x: auto; 
 }
 
-body {
-  background-color: white;
-  width: 100vw;
-  height: 100vh;
-  height: fit-content;
-  overflow: hidden hidden;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
+html {
+  scrollbar-color: white black;
+  scrollbar-width: thin;   
 }

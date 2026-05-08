@@ -3,7 +3,7 @@
       position: relative;
       left: 0;
       top: 0;
-      width: 100vw;
+      width: calc(var(--app-width) * 1);
       height: fit-content;
       background-color: white;
 
@@ -15,22 +15,22 @@
 
     .ForeclosureHome {
         position: relative;
-        margin-top: 12lvh;
-        width: 100vw;
-        height: 120vh;
+        margin-top: calc(var(--app-height) * .12);
+        width: calc(var(--app-width) * 1);
+        height: calc(var(--app-height) * 1.25);
         z-index: 4;
         background-color: white;
         pointer-events: none;
     }
 
     .DefaultContainer .WhyApex .ForeclosureCopy {
-      font-size: 4vw;
+      font-size: calc(var(--app-width) * .04);
       top : 30%;
       transform: translate(-50%, -30%);
     }
 
     .DefaultContainer {
-      height: 100vh;
+      height: calc(var(--app-height) * 1);
     }
 
     .WhyApex {
@@ -71,12 +71,12 @@
 
     .WhyHeadings {
         position: absolute;
-        width: 90vw;
+        width: calc(var(--app-width) * .9);
         left: 50%;
         transform: translateX(-50%);
         top: 5%;
         height : fit-content;
-        font-size: 2vw;
+        font-size: calc(var(--app-width) * .02);
 
         display: flex;
         flex-direction: column;
@@ -113,7 +113,7 @@
         top : 50%;
         left : 50%;
         transform: translateY(-50%) translateX(-50%);
-        width: 90vw;
+        width: calc(var(--app-width) * .9);
         height: fit-content;
         
         color: black;
@@ -130,7 +130,7 @@
 
         font-weight: 500;
 
-        font-size: 3.6vw;
+        font-size: calc(var(--app-width) * .036);
 
         background-size: 200% 100%;
         background-position: 100% 0;
@@ -142,11 +142,11 @@
     @media (min-width : 600px) {
       .ForeclosureCopy {
         top : 45%;
-        font-size: 2.5vw;
+        font-size: calc(var(--app-width) * .025);
       }
 
       .DefaultContainer .WhyApex .ForeclosureCopy {
-        font-size: 3vw;
+        font-size: calc(var(--app-width) * .03);
       }
     }
 
@@ -154,7 +154,7 @@
         position: absolute;
         left: 50%;
         top : 100%;
-        width: 90vw;
+        width: calc(var(--app-width) * .9);
         transform: translate(-50%, -100%);
         overflow: hidden;
     }
@@ -167,14 +167,14 @@
     
   .ShortTermOptions, .LongTermOptions, .ApexOptions {
     position: relative;
-    width: 100vw;
-    height: 120vh;
+    width: calc(var(--app-width) * 1);
+    height: calc(var(--app-height) * 1.2);
     background-color: white;
     z-index: 5;
   }
 
   .ApexOptions {
-    height: 220vh;
+    height: calc(var(--app-height) * 21.2vw);
   }
 
   .OptionsMainHeading {
@@ -195,7 +195,7 @@
   .OptionsMainHeading span {
     color: black;
     font-family: 'Montserrat';
-    font-size: 7vw;
+    font-size: calc(var(--app-width) * .07);
     font-weight: 700;
 
     background: linear-gradient(
@@ -216,7 +216,7 @@
     .OptionsMainHeading span span {
         color: darkgrey;
         font-family: 'Montserrat';
-        font-size: 7vw;
+        font-size: calc(var(--app-width) * .07);
         font-weight: 700;
 
         background: linear-gradient(
@@ -237,7 +237,7 @@
   .OptionsMainHeading button {
     background-color: black;
     color: white;
-    font-size: 4vw;
+    font-size: calc(var(--app-width) * .04);
     width: fit-content;
     border-radius: 35px;
   }
@@ -272,16 +272,16 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 40vw;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    height: calc(var(--app-width) * .4);
+    padding-left: calc(var(--app-width) * .05);
+    padding-right: calc(var(--app-width) * .05);
     border-width: 1px;
     border-color: darkgrey;
     border-style: solid;
   }
 
   .ApexForeclosureOption {
-    height : 50vw
+    height : calc(var(--app-width) * .5)
   }
 
   .OptionMarker {
@@ -297,7 +297,7 @@
     .ForeclosureOption span {
         color: black;
         font-family: 'Montserrat';
-        font-size: 3vw;
+        font-size: calc(var(--app-width) * .03);
         font-weight: 900;
         width: 90%;
 
@@ -319,13 +319,13 @@
     .OptionMarker span {
         color: darkgray;
         font-family: 'Montserrat';
-        font-size: 3vw;
+        font-size: calc(var(--app-width) * .03);
         font-weight: 900;
     }
     .ForeclosureOption span span {
         color: darkgray;
         font-family: 'Montserrat';
-        font-size: 3vw;
+        font-size: calc(var(--app-width) * .03);
         font-weight: 900;
 
         background: linear-gradient(
@@ -345,19 +345,19 @@
 
     @media (min-width : 600px) {
     .ForeclosureOption {
-      height: 30vw;
+      height: calc(var(--app-width) * .3);
     }
 
     .ApexForeclosureOption {
-      height : 50vw
+      height : calc(var(--app-width) * .5)
     }
 
     .ForeclosureOption span {
-      font-size: 3vw;
+      font-size: calc(var(--app-width) * .03);
     }
 
     .ForeclosureOption span span {
-      font-size: 3vw;
+      font-size: calc(var(--app-width) * .03);
     }
     
     .OptionsCopy {
@@ -367,11 +367,11 @@
     }
 
     .ApexOptions {
-      height: 280vh;
+      height: calc(var(--app-height) * 2.8);
     }
 
     .ShortTermOptions, .LongTermOptions {
-      height: 120vh;
+      height: calc(var(--app-height) * 1.2);
       z-index: 5;
     }
   }

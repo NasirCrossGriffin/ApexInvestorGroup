@@ -1,23 +1,30 @@
 @media (orientation: landscape) {
   .LandingPage {
-    width: 100%;
+    position: relative;
+    width: calc(var(--app-width) * 1);
     height: fit-content;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
     overflow: hidden hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    scrollbar-color: white white;   
   }
 
   .Home {
       position: relative;
-      width : 100vw;
-      height : 300vh;
+      width : calc(var(--app-width) * 1);
+      height : calc(var(--app-height) * 3);
       z-index: 1;
       top : 0;
       left: 50%;
       transform: translateX(-50%);
       overflow: hidden hidden;
       background-color: transparent;
-      scroll-margin-top: 26vh;
+      scroll-margin-top: calc(var(--app-height) * .26);
 
       display: flex;
       flex-direction: column;
@@ -29,7 +36,7 @@
     position: absolute;
     z-index: 2;
     pointer-events: none;
-    width: 100vw;
+    width: calc(var(--app-width) * 1);
     left: 0;
   }
 
@@ -43,7 +50,7 @@
     position: absolute;
     z-index: 3;
     pointer-events: none;
-    width: 100vw;
+    width: calc(var(--app-width) * 1);
   }
 
   .CloudLayer2 img {
@@ -56,8 +63,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: calc(var(--app-width) * 1);
+    height: calc(var(--app-height) * 1);
     z-index: 1;
   }
   
@@ -78,7 +85,7 @@
 
   .Heading h1 {
     color: black;
-    font-size: 7vw;
+    font-size: calc(var(--app-width) * .07);
     font-weight: 900;
     font-family: 'Montserrat';
     text-wrap: nowrap;
@@ -102,8 +109,10 @@
 
   .Skyline {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    top : 0;
+    left: 0;
+    width: calc(var(--app-width) * 1);
+    height: calc(var(--app-height) * 1);
     pointer-events: none;
     overflow: hidden hidden;
   }
@@ -127,8 +136,8 @@
   .Apartment {
     position: absolute;
     z-index: 2;
-    width: 100vw;
-    height: 200vh;
+    width: calc(var(--app-width) * 1);
+    height: calc(var(--app-height) * 2);
     top: 0;
     left: 0;
     pointer-events: none;
@@ -152,8 +161,8 @@
 
     .Section2 {
         position: absolute;
-        width: 100vw;
-        height: 100vh;
+        width: calc(var(--app-width) * 1);
+        height: calc(var(--app-height) * 1);
         bottom : 0;
         z-index: 4;
         background-color: white;
@@ -198,7 +207,7 @@
 
     .WhyHeadings {
         position: absolute;
-        width: 40vw;
+        width: calc(var(--app-width) * .4);
         left: 98%;
         transform: translateX(-98%);
         top: 0;
@@ -213,7 +222,7 @@
     .MainHeading {
         color: black;
         font-family: Montserrat;
-        font-size: 3.5vw;
+        font-size: calc(var(--app-width) * .035);
 
         background: linear-gradient(
           to right,
@@ -233,7 +242,7 @@
     .SubHeading {
         color: black;
         font-family: Montserrat;
-        font-size: 1.5vw;
+        font-size: calc(var(--app-width) * .015);
     }
 
     @media (max-width : 1024px) {
@@ -245,8 +254,8 @@
         top : 55%;
         left : 98%;
         transform: translateY(-55%) translateX(-98%);
-        width: 40vw;
-        font-size: 1.1vw;
+        width: calc(var(--app-width) * .4);
+        font-size: calc(var(--app-width) * .011);
         
         color: black;
         font-family: 'Montserrat';
@@ -271,7 +280,7 @@
         position: absolute;
         left: 2%;
         top : 30%;
-        width: 25vw;
+        width: calc(var(--app-width) * .25);
         transform: translate(-2%, -30%);
         overflow: hidden;
     }
@@ -310,7 +319,7 @@
         width: 100%;
         font-family: 'Montserrat';
         color: black;
-        font-size: 1.5vw;
+        font-size: calc(var(--app-width) * .015);
         margin: 0 0 0 0;
     }
 
@@ -318,15 +327,15 @@
         width: 100%;
         font-family: 'Montserrat';
         color: darkgrey;
-        font-size: 1.2vw;
+        font-size: calc(var(--app-width) * .012);
         text-wrap: nowrap;
         margin: 0 0 0 0;
     }
 
   .About {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: calc(var(--app-width) * 1);
+    height: calc(var(--app-height) * 1);
     background-color: white;
     z-index: 5;
   }
@@ -338,7 +347,7 @@
     transform : translateX(-50%);
     color: black;
     font-family: 'Montserrat';
-    font-size: 1.3vw;
+    font-size: calc(var(--app-width) * .013);
     width: 80%;
     text-align: center;
 
@@ -410,7 +419,7 @@
     top : 90%;
     left : 50%;
     transform: translate(-50%, -90%);
-    font-size: 1vw;
+    font-size: calc(var(--app-width) * .01);
   }
 
   .AboutCopy h2 {
@@ -435,8 +444,8 @@
 
   .Process {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: calc(var(--app-width) * 1);
+    height: calc(var(--app-height) * 1);
     background-color: white;
     z-index: 5;
   }
@@ -459,7 +468,7 @@
   .ProcessMainHeading span {
     color: black;
     font-family: 'Montserrat';
-    font-size: 3vw;
+    font-size: calc(var(--app-width) * .03);
     font-weight: 700;
 
     background: linear-gradient(
@@ -480,7 +489,7 @@
     .ProcessMainHeading span span {
         color: darkgrey;
         font-family: 'Montserrat';
-        font-size: 3vw;
+        font-size: calc(var(--app-width) * .03);
         font-weight: 700;
 
         background: linear-gradient(
@@ -501,7 +510,7 @@
   .ProcessMainHeading button {
     background-color: black;
     color: white;
-    font-size: 1vw;
+    font-size: calc(var(--app-width) * .01);
     width: fit-content;
     border-radius: 25px;
   }
@@ -536,9 +545,9 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 10vw;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    height: calc(var(--app-width) * .1);
+    padding-left: calc(var(--app-width) * .05);
+    padding-right: calc(var(--app-width) * .05);
     border-width: 1px;
     border-color: darkgrey;
     border-style: solid;
@@ -557,7 +566,7 @@
     .ProcessStep span {
         color: black;
         font-family: 'Montserrat';
-        font-size: 1.4vw;
+        font-size: calc(var(--app-width) * .014);
         font-weight: 900;
         width: 90%;
 
@@ -579,13 +588,13 @@
     .StepMarker span {
         color: darkgray;
         font-family: 'Montserrat';
-        font-size: 1.4vw;
+        font-size: calc(var(--app-width) * .014);
         font-weight: 900;
     }
     .ProcessStep span span {
         color: darkgray;
         font-family: 'Montserrat';
-        font-size: 1.4vw;
+        font-size: calc(var(--app-width) * .014);
         font-weight: 900;
 
         background: linear-gradient(
@@ -605,8 +614,8 @@
 
     .SectionDivider, .SectionDividerProcess, .SectionDividerCaseStudies {
         position: relative;
-        width: 100vw;
-        height: 10vh;
+        width: calc(var(--app-width) * 1);
+        height: calc(var(--app-height) * .1);
         z-index: 5;
     }
 
@@ -621,8 +630,8 @@
     .ActionSection {
         position: relative;
         background-color: black;
-        height: 200vh;
-        width: 100vw;
+        height: calc(var(--app-height) * 2);
+        width: calc(var(--app-width) * 1);
         z-index: 5;
 
         display: flex;
@@ -633,8 +642,8 @@
 
     .ActionHeader, .ActionContent, .CallToActionSection {
         position: relative;
-        width: 101vw;
-        height: 40vh;
+        width: calc(var(--app-width) * 1.01);
+        height: calc(var(--app-height) * .4);
         border-width: 1px;
         border-color: darkgray;
         border-style: solid;
@@ -654,7 +663,7 @@
     }
 
     .ActionSubheading h2 {
-      font-size: 1.8vw;
+      font-size: calc(var(--app-width) * .018);
       width: 55%;
     }
 
@@ -673,7 +682,7 @@
       justify-content: center;
       z-index: 10;
       pointer-events: none;
-      font-size: 1vw;
+      font-size: calc(var(--app-width) * .01);
     }
 
     .ActionOverlay {
@@ -714,17 +723,21 @@
     .CallToActionCopy h2 {
         margin: 0 0 0 0;
         font-family: 'Montserrat';
-        width: 30vw;
+        width: calc(var(--app-width) * .3);
     }
 
     .CallToActionCopy button {
+        position: relative;
         background-color: black;
         border-color: white;
         border-radius: 25px;
         font-weight: bold;
         font-family: 'Montserrat';
         width: 40%;
-        font-size: 1vw;
+        font-size: calc(var(--app-width) * .01);
+        color: white;
+        z-index: 20;
+        pointer-events: all;
     }
 
     .CallToActionSection .ActionSubheading {
@@ -762,19 +775,19 @@
         margin: 0 0 0 0;
         color: white;
         font-family: 'Montserrat';
-        font-size: 3vw;
+        font-size: calc(var(--app-width) * .03);
         font-weight: bolder;
     }
 
     .CallToAction span {
-      font-size: 7vw;
+      font-size: calc(var(--app-width) * .07);
     }
 
     .ActionHeading span span {
         color: darkgrey;
         font-family: 'Montserrat';
         font-weight: bolder;
-        font-size: 3vw;
+        font-size: calc(var(--app-width) * .03);
         font-size: 900;
     }
 
@@ -782,14 +795,15 @@
       position: absolute;
       left: 5%;
       top: 50%;
+      z-index: 11;
       transform: translate(-5%, -50%);
       border-radius: 50%;
       border-color: white;
       border-style: solid;
       font-family: 'Montserrat';
       color: white;
-      width: 2vw;
-      height: 2vw;
+      width: calc(var(--app-width) * .02);
+      height: calc(var(--app-width) * .02);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -798,8 +812,8 @@
 
     .CaseStudies {
       position: relative;
-      width : 100vw;
-      height: 100vh;
+      width : calc(var(--app-width) * 1);
+      height: calc(var(--app-height) * 1);
       background-color: lightgrey;
       z-index: 5;
     }
@@ -823,7 +837,7 @@
   .CaseStudiesMainHeading span {
     color: black;
     font-family: 'Montserrat';
-    font-size: 3vw;
+    font-size: calc(var(--app-width) * .03);
     font-weight: 700;
 
     background: linear-gradient(
@@ -844,7 +858,7 @@
   .CaseStudiesMainHeading span span {
       color: darkgrey;
       font-family: 'Montserrat';
-      font-size: 3vw;
+      font-size: calc(var(--app-width) * .03);
       font-weight: 700;
 
       background: linear-gradient(
@@ -867,8 +881,8 @@
     top : 80%;
     left : 85%;
     transform: translate(-85%, -80%);
-    width: 40vw;
-    height: 30vw;
+    width: calc(var(--app-width) * .4);
+    height: calc(var(--app-width) * .3);
 
     display: flex;
     flex-direction: column;
@@ -882,7 +896,7 @@
     justify-content: flex-start;
     align-items: center;
     width : 100%;
-    height: 3vw;
+    height: calc(var(--app-width) * .03);
   }
 
   .CaseStudySelector button {
@@ -891,10 +905,10 @@
     border-style: solid;
     background-color: transparent;
     color: black;
-    margin-right: 1vw;
+    margin-right: calc(var(--app-width) * .01);
     height: 100%;
     aspect-ratio: 1/1;
-    font-size: 1vw;
+    font-size: calc(var(--app-width) * .01);
   }
 
   .CaseStudy {
@@ -902,14 +916,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    height : 30vh;
+    height : calc(var(--app-height) * .3);
   }
 
   .ClientName, .PropertyAddress, .CaseStudyTestimony span {
-    font-size: 2vw;
+    font-size: calc(var(--app-width) * .02);
     font-weight: bolder;
     color : black;
-    margin-bottom: 2vw;
+    margin-bottom: calc(var(--app-width) * .02);
     font-family: 'Montserrat';
 
     background: linear-gradient(
@@ -941,8 +955,8 @@
   
   .CaseStudyImage {
     position: absolute;
-    width: 40vw;
-    height: 30vw;
+    width: calc(var(--app-width) * .4);
+    height: calc(var(--app-width) * .3);
     left: 5%;
     top : 80%;
     transform: translate(-5%, -80%);
@@ -962,8 +976,8 @@
   .FinalSection {
     position: relative;
     z-index: 5;
-    width: 100vw;
-    height: 100vh;
+    width: calc(var(--app-width) * 1);
+    height: calc(var(--app-height) * 1);
   }
 
   .FinalBackground {
@@ -1047,7 +1061,7 @@
         width: 100%;
         font-family: 'Montserrat';
         color: darkgray;
-        font-size: 1.5vw;
+        font-size: calc(var(--app-width) * .15);
         margin: 0 0 0 0;
     }
 
@@ -1055,15 +1069,15 @@
         width: 100%;
         font-family: 'Montserrat';
         color: white;
-        font-size: 1.2vw;
+        font-size: calc(var(--app-width) * .12);
         text-wrap: nowrap;
         margin: 0 0 0 0;
     }
 
     .ForeclosureSection {
       position: relative;
-      width: 100vw;
-      height: 100vh;
+      width: calc(var(--app-width) * 1);
+      height: calc(var(--app-height) * 1);
       z-index: 7;
       background-color: white;
     }
@@ -1084,7 +1098,7 @@
   .ForeclosureHeading span {
     color: black;
     font-family: 'Montserrat';
-    font-size: 3vw;
+    font-size: calc(var(--app-width) * .03);
     font-weight: 700;
 
     background: linear-gradient(
@@ -1105,7 +1119,7 @@
     .ForeclosureHeading span span {
         color: darkgrey;
         font-family: 'Montserrat';
-        font-size: 3vw;
+        font-size: calc(var(--app-width) * .03);
         font-weight: 700;
 
         background: linear-gradient(
@@ -1126,14 +1140,14 @@
   .ForeclosureHeading button {
     background-color: black;
     color: white;
-    font-size: 1vw;
+    font-size: calc(var(--app-width) * .01);
     width: fit-content;
     border-radius: 25px;
   }
 
   .ForeclosureImage {
     position: absolute;
-    width: 45vw;
+    width: calc(var(--app-width) * .45);
     height: fit-content;
     left: 50%;
     top : 90%;

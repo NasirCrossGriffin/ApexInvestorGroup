@@ -36,8 +36,6 @@ function Navbar(
         navLink : "Testimonials",
     }, {
         navLink : "Services",
-    }, {
-        navLink : "Portal",
     }]
 
     const handleNavigation = (index : number) => {

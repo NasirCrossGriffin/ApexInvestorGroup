@@ -1,7 +1,7 @@
 @media (orientation: landscape) {
     .Navbar {
-        width: 100vw;
-        height: 12lvh;
+        width: 100%;
+        height: calc(var(--app-height) * .12);
         position: fixed;
         top: 0;
         left: 0;
