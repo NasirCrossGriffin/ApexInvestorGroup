@@ -47,8 +47,12 @@ function App() {
         document.documentElement.style.setProperty("--app-width", `${width}px`);
     };
   
-    setHeight();
-    setWidth();
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setHeight();
+        setWidth();
+      });
+    });
 
     function handleViewportChange() {
         // Let mobile Chrome finish resizing after orientation/UI changes

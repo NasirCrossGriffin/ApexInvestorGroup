@@ -174,7 +174,7 @@
   }
 
   .ApexOptions {
-    height: calc(var(--app-height) * 21.2vw);
+    height: calc(var(--app-height) * 2);
   }
 
   .OptionsMainHeading {
