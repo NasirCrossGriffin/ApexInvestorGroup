@@ -22,7 +22,7 @@ function App() {
   const [isScrollingUp, setIsScrollingUp] = useState(true);
   const lastScrollY = useRef(0);
   const [passedFirstScreen, setPassedFirstScreen] = useState(false);
-  const [orientation, setOrientation] = useState(null);
+  const [orientation, setOrientation] = useState<string | null>(null);
 
   useEffect(() => {
     function determineOrientation() {
