@@ -16,7 +16,7 @@
     .Home {
       position: relative;
       width : calc(var(--app-width) * 1);
-      height : calc(var(--app-height) * 3.5);
+      height : calc(var(--app-height) * 4);
       z-index: 1;
       top : 0;
       left: 0;
