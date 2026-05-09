@@ -24,7 +24,7 @@ npm run build || {
         exit 1
 }
 
-npm rm -rf build || {
+sudo rm -rf build || {
         echo "No build folder to delete"
 }
 
@@ -33,7 +33,7 @@ sudo mv dist build || {
         exit 1
 }
 
-npm rm -rf /portfolio/ApexInvestorGroup/backend/build || {
+sudo rm -rf /portfolio/ApexInvestorGroup/backend/build || {
         echo "No build folder to delete"
 }
 
@@ -52,5 +52,5 @@ sudo docker-compose up --build -d || {
         exit 1
 }
 
-echo "The body shop system frontend was rebuilt. The Docker container was started and is successfully serving the body shop system!"
+echo "Apex Real Estate Website successfully built and deployed"
 exit 1
