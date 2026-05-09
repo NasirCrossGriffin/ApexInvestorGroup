@@ -140,7 +140,7 @@ function App() {
 
     const isMobile = window.matchMedia("(pointer: coarse)").matches;
 
-    let maxSeenHeight = window.visualViewport?.height || 0;
+    let maxSeenHeight = window.visualViewport?.height || window.innerHeight;
 
     const setMobileAppHeight = () => {
       const currentHeight = window.visualViewport?.height || window.innerHeight;
