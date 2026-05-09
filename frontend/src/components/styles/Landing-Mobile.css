@@ -174,7 +174,7 @@
     .Section2 {
         position: absolute;
         width: calc(var(--app-width) * 1);
-        height: calc(var(--app-height) * 2);
+        height: calc(var(--app-height) * 2.5);
         bottom : 0;
         z-index: 4;
         background-color: white;
@@ -1294,7 +1294,7 @@
 
   .ForeclosureImage {
     position: absolute;
-    width: 90calc(var(--app-width));
+    width: calc(var(--app-width) * .9);
     height: fit-content;
     left: 50%;
     top : 50%;

@@ -17,7 +17,7 @@
         position: relative;
         margin-top: calc(var(--app-height) * .12);
         width: calc(var(--app-width) * 1);
-        height: calc(var(--app-height) * 1.25);
+        height: calc(var(--app-height) * 1.5);
         z-index: 4;
         background-color: white;
         pointer-events: none;

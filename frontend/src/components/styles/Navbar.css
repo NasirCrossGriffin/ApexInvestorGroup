@@ -52,6 +52,7 @@
     .Navigation button h3 {
         font-family: 'Montserrat', sans-serif;
         color: black;
+        font-size: clamp(7px, 1.3vw ,36px);
         font-weight: 500;
         margin: 0 0 0 0;
     }

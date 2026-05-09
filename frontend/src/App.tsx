@@ -24,10 +24,14 @@ function App() {
   const [passedFirstScreen, setPassedFirstScreen] = useState(false);
 
   useEffect(() => {
+    function determineOrientation() {
+      window.innerWidth > window.innerHeight ? setOrientation('landscape') : setOrientation('portrait')
+    }
+
     const isBrowserFullscreen = () => {
         return (
-            window.outerWidth === screen.availWidth &&
-            window.outerHeight === screen.availHeight
+            window.outerWidth === window.screen.availWidth &&
+            window.outerHeight === window.screen.availHeight
         );
     };
 
@@ -46,11 +50,40 @@ function App() {
 
         document.documentElement.style.setProperty("--app-width", `${width}px`);
     };
+
+    const setPageHeight = () => {
+        const pageHeight = document.documentElement.scrollHeight;
+
+        document.documentElement.style.setProperty(
+            "--page-height",
+            `${pageHeight}px`
+        );
+
+        console.log(pageHeight);
+    };
+
+    const resetPageHeight = () => {
+      document.documentElement.style.setProperty(
+          "--page-height",
+          `${0}px`
+      );
+      
+      console.log(document.documentElement.style.getPropertyValue(
+          "--page-height"
+      ));
+    };
   
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         setHeight();
         setWidth();
+        resetPageHeight();
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            setPageHeight();
+            determineOrientation();
+          })
+        });
       });
     });
 
@@ -60,11 +93,18 @@ function App() {
           requestAnimationFrame(() => {
             setHeight();
             setWidth();
+            resetPageHeight();
+            requestAnimationFrame(() => {
+              requestAnimationFrame(() => {
+                setPageHeight();
+                determineOrientation();
+              })
+            });
           });
         });
       }
   
-    screen.orientation.addEventListener("change", (event) => {
+    window.screen.orientation.addEventListener("change", (event) => {
         handleViewportChange();
     });
 
@@ -84,6 +124,54 @@ function App() {
           handleViewportChange();
       }
     });
+
+    const resizeObserver = new ResizeObserver(() => {
+        resetPageHeight();
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            setPageHeight();
+            determineOrientation();
+          })
+        });
+    });
+
+    resizeObserver.observe(document.body);
+
+    const isMobile = window.matchMedia("(pointer: coarse)").matches;
+
+    let maxSeenHeight = 0;
+
+    const setMobileAppHeight = () => {
+      const currentHeight = window.visualViewport?.height || window.innerHeight;
+
+      // Only grow height, never shrink it
+      if (currentHeight > maxSeenHeight) {
+        maxSeenHeight = currentHeight;
+
+        document.documentElement.style.setProperty(
+          "--app-height",
+          `${maxSeenHeight}px`
+        );
+      }
+    };
+
+    if (isMobile) {
+      setMobileAppHeight();
+
+      setTimeout(setMobileAppHeight, 300);
+      setTimeout(setMobileAppHeight, 800);
+      setTimeout(setMobileAppHeight, 1500);
+
+      window.visualViewport?.addEventListener("resize", setMobileAppHeight);
+      window.addEventListener("orientationchange", () => {
+        maxSeenHeight = 0;
+        setTimeout(setMobileAppHeight, 500);
+      });
+
+      return () => {
+        window.visualViewport?.removeEventListener("resize", setMobileAppHeight);
+      };
+    }
   }, []);
 
   useEffect(() => {
