@@ -4,6 +4,11 @@ cd /portfolio/ApexInvestorGroup || {
         exit 1
 }
 
+sudo docker-compose down || {
+        echo "Unable to build and start body shop system container."
+        exit 1
+}
+
 sudo git pull origin master || {
         echo "Unable to pull latest update."
         exit 1
@@ -19,12 +24,20 @@ npm run build || {
         exit 1
 }
 
+npm rm -rf build || {
+        echo "No build folder to delete"
+}
+
 sudo mv dist build || {
         echo "Rename failed."
         exit 1
 }
 
-mv build /portfolio/ApexInvestorGroup/backend || {
+npm rm -rf /portfolio/ApexInvestorGroup/backend/build || {
+        echo "No build folder to delete"
+}
+
+mv build /portfolio/ApexInvestorGroup/backend/ || {
         echo "Unable to overwrite build folder."
         exit 1
 }
