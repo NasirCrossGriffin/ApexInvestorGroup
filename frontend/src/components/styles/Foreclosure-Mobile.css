@@ -20,6 +20,7 @@
         height: calc(var(--app-height) * 1.5);
         z-index: 4;
         background-color: white;
+        min-height: 100vh;
         pointer-events: none;
     }
 
