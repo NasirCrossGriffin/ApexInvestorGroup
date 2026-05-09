@@ -367,7 +367,7 @@
     }
 
     .ApexOptions {
-      height: calc(var(--app-height) * 2.8);
+      height: calc(var(--app-height) * 3.3);
     }
 
     .ShortTermOptions, .LongTermOptions {
