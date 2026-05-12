@@ -7,9 +7,15 @@ import './styles/Landing-Mobile.css';
 
 
 function Landing({
-  scrollTarget
+  scrollTarget,
+  appHeight,
+  appWidth,
+  pageHeight
 }: {
   scrollTarget: number;
+  appHeight : number;
+  appWidth : number;
+  pageHeight : number;
 }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -83,7 +89,11 @@ function Landing({
 
   const sectionRefs = [homeRef, aboutRef, processSectionRef, foreclosureRef, caseStudiesRef, servicesRef];
 
-
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+    });
+  }, [appWidth, appHeight, pageHeight]);
 
   useEffect(() => {
     if (scrollTarget === undefined) return;

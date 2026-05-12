@@ -23,10 +23,13 @@ function App() {
   const lastScrollY = useRef(0);
   const [passedFirstScreen, setPassedFirstScreen] = useState(false);
   const [orientation, setOrientation] = useState<string | null>(null);
+  const [appHeight, setAppHeight] = useState<number>(0);
+  const [appWidth, setAppWidth] = useState<number>(0);
+  const [pageHeight, setPageHeight] = useState<number>(0);
 
   useEffect(() => {
     function determineOrientation() {
-      window.innerWidth > window.innerHeight ? setOrientation('landscape') : setOrientation('portrait')
+      window.innerWidth > window.innerHeight ? setOrientation('landscape') : setOrientation('portrait');
     }
 
     const isBrowserFullscreen = () => {
@@ -42,6 +45,7 @@ function App() {
         console.log(height);
 
         document.documentElement.style.setProperty("--app-height", `${height}px`);
+        setAppHeight(height)
     };
   
     const setWidth = () => {
@@ -50,9 +54,10 @@ function App() {
         console.log(width);
 
         document.documentElement.style.setProperty("--app-width", `${width}px`);
-    };
+        setAppWidth(width)
+      };
 
-    const setPageHeight = () => {
+    const setPageHeightFunc = () => {
         const pageHeight = document.documentElement.scrollHeight;
 
         document.documentElement.style.setProperty(
@@ -60,7 +65,7 @@ function App() {
             `${pageHeight}px`
         );
 
-        console.log(pageHeight);
+        setPageHeight(pageHeight);
     };
 
     const resetPageHeight = () => {
@@ -72,6 +77,8 @@ function App() {
       console.log(document.documentElement.style.getPropertyValue(
           "--page-height"
       ));
+
+      setPageHeight(0)
     };
   
     requestAnimationFrame(() => {
@@ -81,7 +88,7 @@ function App() {
         resetPageHeight();
         requestAnimationFrame(() => {
           requestAnimationFrame(() => {
-            setPageHeight();
+            setPageHeightFunc();
             determineOrientation();
           })
         });
@@ -97,7 +104,7 @@ function App() {
             resetPageHeight();
             requestAnimationFrame(() => {
               requestAnimationFrame(() => {
-                setPageHeight();
+                setPageHeightFunc();
                 determineOrientation();
               })
             });
@@ -130,7 +137,7 @@ function App() {
         resetPageHeight();
         requestAnimationFrame(() => {
           requestAnimationFrame(() => {
-            setPageHeight();
+            setPageHeightFunc();
             determineOrientation();
           })
         });
@@ -163,7 +170,14 @@ function App() {
       setTimeout(setMobileAppHeight, 800);
       setTimeout(setMobileAppHeight, 1500);
 
-      window.visualViewport?.addEventListener("resize", setMobileAppHeight);
+      function setMobileDimensions() {
+        setMobileAppHeight();
+        requestAnimationFrame(() => {
+          setWidth();
+        })
+      }
+
+      window.visualViewport?.addEventListener("resize", setMobileDimensions);
       window.addEventListener("orientationchange", () => {
         maxSeenHeight = 0;
         setTimeout(setMobileAppHeight, 500);
@@ -228,9 +242,8 @@ function App() {
         <Routes>
                 <>
                     <Route path="/" element={<Navigate to="/Home" />} />
-                    <Route path="/Home" element={<Landing scrollTarget={scrollTarget}/>} />
-                    <Route path="/Foreclosure" element={<Foreclosure scrollTarget={scrollTarget}/>} />
-                    <Route path="/Portfolio" element={<Portfolio />} />
+                    <Route path="/Home" element={<Landing scrollTarget={scrollTarget} appHeight={appHeight} appWidth={appWidth} pageHeight={pageHeight} />} />
+                    <Route path="/Foreclosure" element={<Foreclosure scrollTarget={scrollTarget} appHeight={appHeight} appWidth={appWidth} pageHeight={pageHeight} />} />
                     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                     <Route path="/terms-of-use" element={<TermsOfUse />} />
                     <Route path="/real-estate-disclaimer" element={<RealEstateDisclaimer />} />

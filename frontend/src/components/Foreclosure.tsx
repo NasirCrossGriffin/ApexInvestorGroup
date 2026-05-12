@@ -6,9 +6,15 @@ import './styles/Foreclosure.css';
 import './styles/Foreclosure-Mobile.css';
 
 function Foreclosure({
-  scrollTarget
+  scrollTarget,
+  appHeight,
+  appWidth,
+  pageHeight
 }: {
   scrollTarget: number;
+  appHeight : number;
+  appWidth : number;
+  pageHeight : number;
 }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -103,6 +109,11 @@ const overageClaim = useRef<HTMLSpanElement | null>(null);
 
     const BASE_URL = import.meta.env.DEV ? import.meta.env.VITE_API_LEAD_CAPTURE_DEV : import.meta.env.VITE_API_LEAD_CAPTURE_PROD;
 
+    useEffect(() => {
+        requestAnimationFrame(() => {
+          ScrollTrigger.refresh();
+        });
+    }, [appWidth, appHeight, pageHeight]);
 
   useEffect(() => {
     const v = videoRef.current;
