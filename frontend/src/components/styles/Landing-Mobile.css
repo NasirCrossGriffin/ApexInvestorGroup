@@ -13,18 +13,18 @@
     justify-content: center;
   }
 
-    .Home {
-      position: relative;
-      width : calc(var(--app-width) * 1);
-      height : calc(var(--app-height) * 4);
-      min-height: 100vh;
-      z-index: 1;
-      top : 0;
-      left: 0;
-      overflow: hidden hidden;
-      background-color: transparent;
-      scroll-margin-top: calc(var(--app-height) * .12);
-      margin: 0 0 0 0;
+  .Home {
+    position: relative;
+    width : calc(var(--app-width) * 1);
+    height : calc(var(--app-height) * 4);
+    min-height: 100vh;
+    z-index: 1;
+    top : 0;
+    left: 0;
+    overflow: hidden hidden;
+    background-color: transparent;
+    scroll-margin-top: calc(var(--app-height) * .12);
+    margin: 0 0 0 0;
   }
 
   .CloudLayer1 {
@@ -72,20 +72,19 @@
   }
   
     .Heading {
-        position: absolute;
-        width: fit-content;
-        height: fit-content;
-        z-index: 2;
-        top : 30%;
-        left : 50%;
-        transform: translateX(-50%)  translateY(-30%);
+      position: absolute;
+      width: 100%;
+      height : 100%;
+      top: 0;
+      left: 0;
+      z-index: 5;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        pointer-events: none;
-        overflow: hidden hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      overflow: hidden hidden;
     }
 
   .Heading h1 {
