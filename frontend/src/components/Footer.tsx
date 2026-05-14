@@ -56,14 +56,14 @@ function Footer({
         </div>
 
         <div className='LegalProtections'>
-          <p className='Operator'>This website is operated by Apex Investment Group</p>
+          <p className='Operator'>This website is operated by Apex Investments And Acquisitions</p>
         
           <span className='Divider'></span>
 
           <div className='LegalNav'>
             <a href='/privacy-policy'>Privacy Policy</a>
             <a href='/terms-of-use'>Terms Of Use</a>
-            <a href='/website-disclaimer'>Real Estate Disclaimer</a>
+            <a href='/real-estate-disclaimer'>Real Estate Disclaimer</a>
             <a href='/accessibility'>Accessibility</a>
             <a href='/contact'>Contact</a>
           </div>
