@@ -205,10 +205,10 @@
 
         background: linear-gradient(
           to right,
-          #000000 0%,
+          #ffffff 0%,
+          #ffffff 50%,
           #000000 50%,
-          #999898 50%,
-          #999898 100%
+          #000000 100%
         );
 
         background-size: 200% 100%;
