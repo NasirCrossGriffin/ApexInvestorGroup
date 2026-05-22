@@ -27,7 +27,7 @@ function App() {
   const [appWidth, setAppWidth] = useState<number>(0);
   const [pageHeight, setPageHeight] = useState<number>(0);
 
-  useEffect(() => {
+   useEffect(() => {
     function determineOrientation() {
       window.innerWidth > window.innerHeight ? setOrientation('landscape') : setOrientation('portrait');
     }
@@ -133,17 +133,8 @@ function App() {
       }
     });
 
-    const resizeObserver = new ResizeObserver(() => {
-        resetPageHeight();
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            setPageHeightFunc();
-            determineOrientation();
-          })
-        });
-    });
-
-    resizeObserver.observe(document.body);
+    let lastOuterWidth = window.outerWidth;
+    let lastOuterHeight = window.outerHeight;
 
     const isMobile = window.matchMedia("(pointer: coarse)").matches;
 
@@ -170,9 +161,15 @@ function App() {
       setTimeout(setMobileAppHeight, 800);
       setTimeout(setMobileAppHeight, 1500);
 
+      function isNeutralZoom() {
+        const scale = window.visualViewport?.scale ?? 1;
+        return Math.abs(scale - 1) < 0.01;
+      }
+
       function setMobileDimensions() {
         setMobileAppHeight();
         requestAnimationFrame(() => {
+          if (!isNeutralZoom()) return;
           setWidth();
         })
       }
@@ -187,6 +184,32 @@ function App() {
         window.visualViewport?.removeEventListener("resize", setMobileAppHeight);
       };
     }
+
+    //Resize Window #Finally doesn't break zoom
+    window.addEventListener("resize", () => {
+      const isDesktop =
+      window.matchMedia("(pointer: fine)").matches &&
+      !window.matchMedia("(pointer: coarse)").matches;
+
+      if (!(isDesktop)) return;
+
+      const outerWidthChanged = Math.abs(window.outerWidth - lastOuterWidth) > 10;
+      const outerHeightChanged = Math.abs(window.outerHeight - lastOuterHeight) > 10;
+
+      if (!outerWidthChanged && !outerHeightChanged) {
+        // likely zoom, not real browser window resize
+        return;
+      }
+
+      lastOuterWidth = window.outerWidth;
+      lastOuterHeight = window.outerHeight;
+
+      console.log("Actual browser window resized");
+
+      document.documentElement.style.setProperty("--app-width", `${window.innerWidth}px`);
+      document.documentElement.style.setProperty("--app-height", `${window.innerHeight}px`);
+    });
+
   }, []);
 
   useEffect(() => {
