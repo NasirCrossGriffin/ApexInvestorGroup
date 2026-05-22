@@ -151,6 +151,8 @@ function App() {
           "--app-height",
           `${maxSeenHeight}px`
         );
+
+        setAppHeight(maxSeenHeight);
       }
     };
 
@@ -207,7 +209,9 @@ function App() {
       console.log("Actual browser window resized");
 
       document.documentElement.style.setProperty("--app-width", `${window.innerWidth}px`);
+      setAppWidth(window.innerWidth);
       document.documentElement.style.setProperty("--app-height", `${window.innerHeight}px`);
+      setAppHeight(window.innerHeight);
     });
 
   }, []);
