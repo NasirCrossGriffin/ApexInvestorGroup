@@ -9,12 +9,14 @@ function Foreclosure({
   scrollTarget,
   appHeight,
   appWidth,
-  pageHeight
+  pageHeight,
+  setActive
 }: {
   scrollTarget: number;
   appHeight : number;
   appWidth : number;
   pageHeight : number;
+  setActive : React.Dispatch<React.SetStateAction<null | boolean>>;
 }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -544,24 +546,6 @@ const overageClaim = useRef<HTMLSpanElement | null>(null);
 
   }, []);
 
-  const caseStudies = [
-    {
-      Address : "Philadelphia, PA",
-      Client : "Ellen Gore",
-      Testimony : `Ellen's mother had passed away, she was stuck with the property.
-      Apex Investor Group paid all legal fees and opened an estate to allow her
-      to close a sale.`
-    },
-
-    {
-      Address : "313 E Washington Ave",
-      Client : "Newtown, PA",
-      Testimony : `Stacy was struggling to afford her monthly rate, she was under water
-      on her loan. Apex Investor Group deployed equity into the property and assisted
-      her in selling the home at market value.`
-    }
-  ]
-
   return (
     <>
         <div className='ForeclosurePage'>
@@ -623,7 +607,7 @@ const overageClaim = useRef<HTMLSpanElement | null>(null);
             <div className='ShortTermOptions'>
                 <div className='OptionsMainHeading'>
                     <span ref={shortTermHeading}>Short Term/Temporary<br/> <span>Financial situation</span></span>
-                    <button onClick={() => {window.open(`${BASE_URL}/lead/sell`, '_blank')}}>Explore →</button>
+                    <button onClick={() => setActive(true)}>Explore →</button>
                 </div>
                 
                 <div className='OptionsCopy'>
@@ -662,7 +646,7 @@ const overageClaim = useRef<HTMLSpanElement | null>(null);
             <div className='LongTermOptions'>
                 <div className='OptionsMainHeading'>
                     <span ref={longTermHeading}>Long Term/Permanent<br/> <span>Financial situation</span></span>
-                    <button onClick={() => {window.open(`${BASE_URL}/lead/sell`, '_blank')}}>Explore →</button>
+                    <button onClick={() => setActive(true)}>Explore →</button>
                 </div>
                 
                 <div className='OptionsCopy'>
@@ -704,7 +688,7 @@ const overageClaim = useRef<HTMLSpanElement | null>(null);
             <div className='ApexOptions'>
                 <div className='OptionsMainHeading'>
                     <span ref={apexHeading}>Apex<br/> <span>Options</span></span>
-                    <button onClick={() => {window.open(`${BASE_URL}/lead/sell`, '_blank')}}>Explore →</button>
+                    <button onClick={() => setActive(true)}>Explore →</button>
                 </div>
                 
                 <div className='OptionsCopy'>

@@ -8,7 +8,8 @@ function Navbar(
         setScrollTarget,
         setSearchQuery,
         isScrollingUp,
-        passedFirstScreen
+        passedFirstScreen,
+        setActive
     } 
     : 
     {
@@ -16,6 +17,7 @@ function Navbar(
         setSearchQuery : React.Dispatch<React.SetStateAction<string>>
         passedFirstScreen : boolean
         isScrollingUp : boolean
+        setActive : React.Dispatch<React.SetStateAction<null | boolean>>;
     }
 ) {
     const navigate = useNavigate();
@@ -54,7 +56,7 @@ function Navbar(
                         <div className='NavLink'><button onClick={index !== 6 ? () => {handleNavigation(index)} : () => {window.open(`${BASE_URL}/lead/admin`, '_blank')}}><h3>{link.navLink}</h3></button></div>
                     ))}
                 </div>
-                <button className='NavContact' onClick={() => {window.open(`${BASE_URL}/lead`, '_blank')}}>Contact</button>
+                <button className='NavContact' onClick={() => setActive(true)}>Contact</button>
                 <a className='NavDrawerToggle' onClick={() => setNavDrawer(!navDrawer)}>
                     <span />
                     <span />

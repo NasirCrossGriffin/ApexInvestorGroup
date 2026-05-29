@@ -4,18 +4,21 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './styles/Landing.css';
 import './styles/Landing-Mobile.css';
+import SubmitInquiry from './SubmitInquiry';
 
 
 function Landing({
   scrollTarget,
   appHeight,
   appWidth,
-  pageHeight
+  pageHeight,
+  setActive
 }: {
   scrollTarget: number;
   appHeight : number;
   appWidth : number;
   pageHeight : number;
+  setActive : React.Dispatch<React.SetStateAction<null | boolean>>;
 }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -81,6 +84,7 @@ function Landing({
   const [observingImage, setObservingImage] = useState(false);
   const [observingContact, setObservingContact] = useState(false);
   const [observingFirstVideo, setObservingFirstVideo] = useState(false);
+
 
   const BASE_URL = import.meta.env.DEV ? import.meta.env.VITE_API_LEAD_CAPTURE_DEV : import.meta.env.VITE_API_LEAD_CAPTURE_PROD;
   
@@ -479,7 +483,7 @@ function Landing({
           <div className='Heading' ref={headingRef}>
             <h1 className='fade-in-slide-up'>Invest at the Apex</h1>
             <h2 className='fade-in-slide-up'>Quick. Secure. Property investors</h2>
-            <button className='fade-in-slide-up' onClick={() => {window.open(`${BASE_URL}/lead/buy`, '_blank')}}>{"Find Properties →"}</button>
+            <button className='fade-in-slide-up' onClick={() => setActive(true)}>{"Invest Today →"}</button>
           </div>
         </div>
         <div className='CloudLayer1' ref={cloudOneRef}><img src={window.innerWidth >= window.innerHeight ? '/CloudLayer1.png' : '/CloudLayer1_mobile.png'}/></div>
@@ -566,7 +570,7 @@ function Landing({
       <div className='Process' ref={processSectionRef}>
         <div className='ProcessMainHeading'>
           <span ref={processMainHeading}>Top Tier<br/> <span>Real Estate</span></span>
-          <button onClick={() => {window.open(`${BASE_URL}/lead`, '_blank')}}>Start Your Search →</button>
+          <button onClick={() => setActive(true)}>Start Your Search →</button>
         </div>
         <div className='ProcessCopy'>
           <h2>Steps:</h2>
@@ -610,7 +614,7 @@ function Landing({
       <div className='ForeclosureSection' ref={foreclosureRef}>
         <div className='ForeclosureHeading'>
           <span ref={facingForeclosure}>Facing Foreclosure?<br/><span>We can help</span></span>
-          <button onClick={() => {navigateToForeclosure()}}>Learn More →</button>
+          <button onClick={() => navigateToForeclosure()}>Learn More →</button>
         </div>
 
         <div className='ForeclosureImage' ref={foreclosureImage}><img src='/house8.webp'/></div>
@@ -655,7 +659,7 @@ function Landing({
           <div className='ActionHeading'><span>How Apex<br/><span>Can Help You</span></span></div>
         </div>
 
-        <a className='ActionContent' onClick={() => {window.open(`${BASE_URL}/lead/buy`, '_blank')}}>
+        <a className='ActionContent' onClick={() => setActive(true)}>
           <div className="ActionOverlay"></div>
           <div className='ActionImage'>
             <img src="/House3.jpg"/>
@@ -669,7 +673,7 @@ function Landing({
           <div className='CallToAction' ><span>Buy</span></div>
         </a>
 
-        <a className='ActionContent' onClick={() => {window.open(`${BASE_URL}/lead/sell`, '_blank')}}>
+        <a className='ActionContent' onClick={() => setActive(true)}>
           <div className="ActionOverlay"></div>
           <div className='ActionImage'>
             <img src="/House4.png"/>
@@ -682,7 +686,7 @@ function Landing({
           <div className='CallToAction' ><span>Sell</span></div>
         </a>
 
-        <a className='ActionContent' onClick={() => {window.open(`${BASE_URL}/lead/invest`, '_blank')}}>
+        <a className='ActionContent' onClick={() => setActive(true)}>
           <div className="ActionOverlay"></div>
           <div className='ActionImage'>
             <img src="/House5.jpeg"/>
@@ -703,7 +707,7 @@ function Landing({
               every stage of real estate with expert
               knowledge and reliable support.
             </h2>
-            <button onClick={() => {window.open(`${BASE_URL}/lead`, '_blank')}}>Get Started With Apex →</button>
+            <button onClick={() => setActive(true)}>Get Started With Apex →</button>
           </div>
         </a>
       </div>
@@ -715,7 +719,7 @@ function Landing({
             <div className='Overlay'></div>
             <div className='FinalCallToAction'>
               <h1>Reach The Apex. We’ll Help You Get There.</h1>
-              <button onClick={() => {window.open(`${BASE_URL}/lead`, '_blank')}}>Let's Get Started →</button>
+              <button onClick={() => setActive(true)}>Let's Get Started →</button>
             </div>
       </div>
       </div>

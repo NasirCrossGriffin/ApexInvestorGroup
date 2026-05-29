@@ -9,3 +9,8 @@ html {
   scrollbar-color: white black;
   scrollbar-width: thin;   
 }
+
+.SubmitInquiry {
+  width: var(--app-width);
+  height: var(--app-height);
+}

@@ -15,6 +15,7 @@ import TermsOfUse from './components/TermsOfUse.tsx';
 import RealEstateDisclaimer from './components/RealEstateDisclaimer.tsx';
 import AccessibilityStatement from './components/AccessibilityStatement.tsx';
 import ContactPage from './components/Contact.tsx';
+import SubmitInquiry from './components/SubmitInquiry.tsx';
 
 function App() {
   const [scrollTarget, setScrollTarget] = useState<number>(0)
@@ -26,6 +27,8 @@ function App() {
   const [appHeight, setAppHeight] = useState<number>(0);
   const [appWidth, setAppWidth] = useState<number>(0);
   const [pageHeight, setPageHeight] = useState<number>(0);
+  const [active, setActive] = useState<null | boolean>(null);
+
 
    useEffect(() => {
     function determineOrientation() {
@@ -211,7 +214,7 @@ function App() {
       document.documentElement.style.setProperty("--app-width", `${window.innerWidth}px`);
       setAppWidth(window.innerWidth);
       document.documentElement.style.setProperty("--app-height", `${window.innerHeight}px`);
-      setAppHeight(window.innerHeight);
+      setAppHeight(window.innerHeight)
     });
 
   }, []);
@@ -265,12 +268,13 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar passedFirstScreen={passedFirstScreen} isScrollingUp={isScrollingUp} setScrollTarget={setScrollTarget} setSearchQuery={setSearchQuery}/>
+        <SubmitInquiry active={active} setActive={setActive}/>
+        <Navbar passedFirstScreen={passedFirstScreen} isScrollingUp={isScrollingUp} setScrollTarget={setScrollTarget} setSearchQuery={setSearchQuery} setActive={setActive}/>
         <Routes>
                 <>
                     <Route path="/" element={<Navigate to="/Home" />} />
-                    <Route path="/Home" element={<Landing scrollTarget={scrollTarget} appHeight={appHeight} appWidth={appWidth} pageHeight={pageHeight} />} />
-                    <Route path="/Foreclosure" element={<Foreclosure scrollTarget={scrollTarget} appHeight={appHeight} appWidth={appWidth} pageHeight={pageHeight} />} />
+                    <Route path="/Home" element={<Landing scrollTarget={scrollTarget} appHeight={appHeight} appWidth={appWidth} pageHeight={pageHeight} setActive={setActive}/>} />
+                    <Route path="/Foreclosure" element={<Foreclosure scrollTarget={scrollTarget} appHeight={appHeight} appWidth={appWidth} pageHeight={pageHeight} setActive={setActive} />} />
                     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                     <Route path="/terms-of-use" element={<TermsOfUse />} />
                     <Route path="/real-estate-disclaimer" element={<RealEstateDisclaimer />} />
